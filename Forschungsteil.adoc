@@ -15,8 +15,67 @@ toc::[]
 Analyse und Forschung zur Entwicklung eines, für die Zielgruppe älterer Menschen
 anwendbaren, Adaptionskonzepts für Sprachinteraktion basierend auf der Konfiguration von Feature-Modellen und der Konfigurationsauswahl durch ein Recommender-System.
 
+== Weshalb ein VA für Senioren
+
+== Spezifikation der Zielgruppe
+=== Tabelle mit Charakteristikas 
+
+== Wake Up des VA
+
+== Art des Sprechens
+=== Stimmlage
+=== Kommunikationsstil
+=== komplexität der Satzstruktur
+=== Support des VA
+
+== VA als Helfer im Alltag
+
+== Sicherheitsbedenken 
+Woher kommt die Antwort und wer hat die Musik vorher in den VA geladen, damit er diese jetzt abspielen kann? - Hildegard, 84, verwirrt
+
 == Nutzendenmodell
+    * Altersunterschiede
+    * technische Vorkenntnisse
+    * Einkommen
+    * Lebenssituation
+    * körperliche EInschränkungen
 
 == Personas
 
 == Variabilitätsmodell
+=== mögliche Features
+    * Tonlage der Stimme
+        ** hoch
+        ** tief
+        ** männlich
+        ** weiblich
+    * Kommunikationsstil
+        ** Aufgabenorientiert
+        ** Sozial orientiert
+        ** Professionalität der Sprechweise 
+            *** ehr wie ein Freund
+            *** ehr wie ein Arzt/Professor/Fachmann
+        ** Komplexität der Sätze
+            *** einfach
+            *** komplex
+    * Support in Aufgaben der Menschen (e.g. Mensch macht Sport, zählt VA mit?)
+        ** Mitmachen
+        ** Loben
+        ** nichts
+    * Medizinische Hilfestellung
+        ** Nach Befinden Fragen
+        ** Hilfestellung zur Medikamenteneinnahme
+        ** Notarzt verständigen?
+    * Aktiv werden des VA
+        ** dauerhaft aktiv
+        ** auf "Wake Up" Ruf
+        ** Intervall (alle 30 min)
+    * Inaktiv werden
+        ** nach Zeitlimit
+        ** auf Call
+        ** nie
+    * Ausgleich für Defizit
+        ** Dinge merken
+        ** Vorlesen
+        ** Erinnern
+        ** Nachrichten senden
