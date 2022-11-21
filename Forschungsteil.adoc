@@ -1,0 +1,22 @@
+:toc: macro
+:toc-title: Inhaltsvezeichnis
+= Forschungsteil
+:project_name: Individualisierbare Sprachinteraktion
+
+== {project_name}
+
+toc::[]
+:numbered:
+
+// Anmerkung:
+// Das Dokument befindet sich noch in Arbeit und dient zunächst primär der Informationssammlung
+
+== Aufgabenstellung und Zielsetzung
+Analyse und Forschung zur Entwicklung eines, für die Zielgruppe älterer Menschen
+anwendbaren, Adaptionskonzepts für Sprachinteraktion basierend auf der Konfiguration von Feature-Modellen und der Konfigurationsauswahl durch ein Recommender-System.
+
+== Nutzendenmodell
+
+== Personas
+
+== Variabilitätsmodell

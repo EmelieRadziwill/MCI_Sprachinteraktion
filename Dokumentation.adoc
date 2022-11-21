@@ -1,0 +1,21 @@
+:toc: macro
+:toc-title: Inhaltsvezeichnis
+= Dokumentation
+:project_name: Individualisierbare Sprachinteraktion
+
+== {project_name}
+
+toc::[]
+:numbered:
+
+// Anmerkung:
+// Das Dokument befindet sich noch in Arbeit und dient zunächst primär der Informationssammlung
+
+== Aufgabenstellung und Zielsetzung
+Die Entwicklung eines für die Zielgruppe älterer Menschen
+anwendbaren Adaptionskonzepts für Sprachinteraktion basierend auf der Konfiguration von Feature-Modellen und der Konfigurationsauswahl durch ein Recommender-System.
+
+== Forschungsteil (Arbeitstitel)
+== technischer Aufbau (Arbeitstitel)
+== Produktaufbau/ -verwendung (Arbeitstitel)
+== Teamaufbau Rollenverteilung (Arbeitstitel)
