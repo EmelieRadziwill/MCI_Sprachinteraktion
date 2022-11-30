@@ -17,8 +17,59 @@ anwendbaren, Adaptionskonzepts für Sprachinteraktion basierend auf der Konfigur
 
 == Weshalb ein VA für Senioren
 
-== Spezifikation der Zielgruppe
-=== Tabelle mit Charakteristikas 
+== Spezifikation der Zielgruppe 
+=== User Model
+.Characteristics older adults
+[cols="1, 1"]
+|===
+|Alter
+|≥ 65
+
+|Geschlecht
+a| * männlich
+   * weiblich 
+   * diverse
+
+|technische Vorkenntnisse
+a| * keine 
+   * wenig 
+   * durchschnittlich
+   * viele 
+
+|Einkommen
+a| * wenig Rente
+   * durchschnittliche Rente
+   * viel Rente / Rücklagen
+
+|Wohnsituation
+a| * alleine
+   * mit Partner
+   * mit Familie
+   * im Heim
+
+|Familienstand
+a| * ledig
+   * verheiratet
+   * verwitwet
+
+|körperliche Einschränkungen
+a| * keine
+   * Sehschwäche
+   * Hörschwäche
+   * eingeschränkte Beweglichkeit
+   * ...
+
+|geistige Einschränkungen
+a| * keine
+   * Dement
+|===
+
+=== Personas
+image::graphics/Persona-1.png[]
+image::graphics/Persona-2.png[]
+
+_Exploring How Older Adults Use a Smart Speaker–Based Voice Assistant in Their First Interactions: Qualitative Study_
+
 
 == Wake Up des VA
 
@@ -31,16 +82,6 @@ anwendbaren, Adaptionskonzepts für Sprachinteraktion basierend auf der Konfigur
 == VA als Helfer im Alltag
 
 == Sicherheitsbedenken 
-Woher kommt die Antwort und wer hat die Musik vorher in den VA geladen, damit er diese jetzt abspielen kann? - Hildegard, 84, verwirrt
-
-== Nutzendenmodell
-    * Altersunterschiede
-    * technische Vorkenntnisse
-    * Einkommen
-    * Lebenssituation
-    * körperliche EInschränkungen
-
-== Personas
 
 == Variabilitätsmodell
 === mögliche Features

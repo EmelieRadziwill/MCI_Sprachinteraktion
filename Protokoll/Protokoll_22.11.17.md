@@ -35,3 +35,5 @@
 + Soll nur ein Skill gebaut werden oder mehrere?
 + Muss ein konkreter Zeitplan stehen? Bisher noch sehr unübersichtlich
 + Trainingsmethode für Recommender System
++ Wie soll das Nutzermodel aussehen? (Visualisierung, Umfang, Personas Teil davon?)
++ Was beinhaltet "Sprachvarianten" im Sinne des Feature-Modells
