@@ -87,53 +87,7 @@ _Exploring How Older Adults Use a Smart Speaker–Based Voice Assistant in Their
 == Sicherheitsbedenken 
 
 == Variabilitätsmodell
-=== mögliche Features
-    * Stimme
-        ** Tonlage 
-            *** hoch
-            *** tief
-        ** Geschlecht
-            *** männlich
-            *** weiblich
-        ** Lautstärke
-            *** laut
-            *** mittel
-            *** leise
-    * Sprache
-        ** Sprache
-            *** Deutsch
-            *** Englisch
-            *** ...
-        ** Kommunikationsstil
-            *** Aufgabenorientiert
-            *** Sozial orientiert
-            *** Professionalität der Sprechweise 
-                **** ehr wie ein Freund
-                **** ehr wie ein Arzt/Professor/Fachmann
-            *** Komplexität der Sätze
-                **** einfach
-                **** komplex
-            *** Umgang mit Dialekt
+image::graphics/FeatureModel.png[]
+image::graphics/ConfigEx.png[]
 
-    * Verhalten
-        ** Support in Aufgaben der Menschen (e.g. Mensch macht Sport, zählt VA mit?)
-            *** Mitmachen
-            *** Loben
-            *** nichts
-        ** Medizinische Hilfestellung
-            *** Nach Befinden Fragen
-            *** Hilfestellung zur Medikamenteneinnahme
-            *** Notarzt verständigen?
-        ** Aktiv werden des VA
-            *** dauerhaft aktiv
-            *** auf "Wake Up" Ruf
-            *** Intervall (alle 30 min)
-        ** Inaktiv werden
-            *** nach Zeitlimit
-            *** auf Call
-            *** nie
-        ** Ausgleich für Defizit
-            *** Dinge merken
-            *** Vorlesen
-            *** Erinnern
-            *** Nachrichten senden
+    
