@@ -28,13 +28,12 @@ anwendbaren, Adaptionskonzepts für Sprachinteraktion basierend auf der Konfigur
 |Geschlecht
 a| * männlich
    * weiblich 
-   * diverse
 
 |technische Vorkenntnisse
 a| * keine 
    * wenig 
    * durchschnittlich
-   * viele 
+   * viel
 
 |Einkommen
 a| * wenig Rente
@@ -48,20 +47,24 @@ a| * alleine
    * im Heim
 
 |Familienstand
-a| * ledig
+a| * ledig/ verwitwet
    * verheiratet
-   * verwitwet
 
-|körperliche Einschränkungen
+|physische Gesundheit
 a| * keine
    * Sehschwäche
    * Hörschwäche
    * eingeschränkte Beweglichkeit
    * ...
 
-|geistige Einschränkungen
+|kognitive Gesundheit
 a| * keine
    * Dement
+
+|sozialer Support
+a| * keiner
+   * wenig
+   * viel
 |===
 
 === Personas
@@ -110,6 +113,8 @@ _Exploring How Older Adults Use a Smart Speaker–Based Voice Assistant in Their
             *** Komplexität der Sätze
                 **** einfach
                 **** komplex
+            *** Umgang mit Dialekt
+
     * Verhalten
         ** Support in Aufgaben der Menschen (e.g. Mensch macht Sport, zählt VA mit?)
             *** Mitmachen
