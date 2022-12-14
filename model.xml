@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="autolayoutconstraints" value="false"/>
+		<graphics key="legendposition" value="20,16"/>
+		<graphics key="legendautolayout" value="false"/>
+		<graphics key="showconstraints" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="vertical"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="4"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="VAFeatureModel">
+			<graphics key="collapsed" value="false"/>
+			<and mandatory="true" name="Sprachassistent">
+				<and mandatory="true" name="Stimme">
+					<alt mandatory="true" name="Tonlage">
+						<feature name="hoch"/>
+						<feature name="tief"/>
+					</alt>
+					<alt mandatory="true" name="Geschlecht">
+						<feature name="männlich"/>
+						<feature name="weiblich"/>
+					</alt>
+					<alt mandatory="true" name="Lautstärke">
+						<feature name="laut"/>
+						<feature name="mittel"/>
+						<feature name="leise"/>
+					</alt>
+				</and>
+				<and mandatory="true" name="Spracheigenschaften">
+					<alt mandatory="true" name="Geschwindigkeit">
+						<feature name="schnell"/>
+						<feature name="durchschnittlich"/>
+						<feature name="langsam"/>
+					</alt>
+					<alt mandatory="true" name="Sprache">
+						<feature name="Deutsch"/>
+						<feature name="Englisch"/>
+					</alt>
+				</and>
+				<and mandatory="true" name="Kommunikationsstil">
+					<alt mandatory="true" name="Gesprächsorientierung">
+						<feature name="Aufgaben orientiert"/>
+						<feature name="Sozial orientiert"/>
+					</alt>
+					<alt mandatory="true" name="Ausdruck">
+						<feature name="professionell"/>
+						<feature name="freundschaftlich"/>
+					</alt>
+					<alt mandatory="true" name="Komplexität">
+						<feature name="einfach"/>
+						<feature name="normal"/>
+					</alt>
+					<feature name="Dialekt"/>
+				</and>
+				<and mandatory="true" name="Verhalten">
+					<and name="Motivierung">
+						<feature name="Loben"/>
+						<feature name="Mitmachen"/>
+					</and>
+					<and name="Hilfestellung">
+						<and name="medizinisch">
+							<feature name="nach Befinden fragen"/>
+							<feature name="Erinnerung an Medikamente"/>
+						</and>
+						<feature name="merken und erinnern"/>
+						<feature name="vorlesen"/>
+						<feature name="Nachrichten senden"/>
+					</and>
+					<or mandatory="true" name="Aktivierung">
+						<feature name="dauerhaft aktiv"/>
+						<feature name="aktiv durch wake up call"/>
+						<feature name="Intervall Aktivierung"/>
+					</or>
+					<or mandatory="true" name="Deaktivierung">
+						<feature name="nach Zeitlimit"/>
+						<feature name="inaktiv durch sleep call"/>
+						<feature name="nie"/>
+					</or>
+				</and>
+			</and>
+		</and>
+	</struct>
+	<constraints>
+		<rule>
+			<imp>
+				<disj>
+					<var>aktiv durch wake up call</var>
+					<var>Intervall Aktivierung</var>
+				</disj>
+				<not>
+					<var>nie</var>
+				</not>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<disj>
+					<var>nach Zeitlimit</var>
+					<var>inaktiv durch sleep call</var>
+				</disj>
+				<not>
+					<var>dauerhaft aktiv</var>
+				</not>
+			</imp>
+		</rule>
+	</constraints>
+</featureModel>

@@ -16,6 +16,10 @@ Analyse und Forschung zur Entwicklung eines, für die Zielgruppe älterer Mensch
 anwendbaren, Adaptionskonzepts für Sprachinteraktion basierend auf der Konfiguration von Feature-Modellen und der Konfigurationsauswahl durch ein Recommender-System.
 
 == Weshalb ein VA für Senioren
+ISO/IEC Guide 71, 154-160 
+Exploring How Older Adults Use a Smart Speaker–Based Voice Assistant in Their First Interactions: Qualitative Study 
+
+
 
 == Spezifikation der Zielgruppe 
 === User Model
@@ -74,20 +78,48 @@ image::graphics/Persona-2.png[]
 _Exploring How Older Adults Use a Smart Speaker–Based Voice Assistant in Their First Interactions: Qualitative Study_
 
 
-== Wake Up des VA
+== Features des Sprachassistenten
+=== Stimme
+==== Tonlage
+ISO/IEC Guide 103-104
 
-== Art des Sprechens
-=== Stimmlage
+==== Geschlecht
+==== Lautstärke
+ISO/IEC Guide 71, s.79, 99, 103-104
+
+=== Spracheigenschaften
+==== Sprechgeschwindigkeit
+ISO/IEC Guide 71, s.43
+
+==== Sprache
+
 === Kommunikationsstil
-=== komplexität der Satzstruktur
-=== Support des VA
+==== Orientierung der Kommunikation
+User interactions with “Alexa” in public academic space.
+Design and evaluation of a smart home voice interface for the elderly: acceptability and objection aspects
 
-== VA als Helfer im Alltag
+==== Sprechweise
+Anthropomorphisierendes Verhalten kann beabsichtigt sein und einer Person dabei helfen, einem unbekannten Objekt einen Sinn zu geben, das Gefühl der Unsicherheit zu verringern oder soziale Verbindungen herzustellen (Epley et al., 2007). 
+User interactions with “Alexa” in public academic space.
 
-== Sicherheitsbedenken 
+==== Komplexität der Sätze
+==== Dialekt
+
+=== Verhalten
+==== Motivierung
+==== Hilfestellung
+ISO/IEC Guide 71, s.73
+Design and evaluation of a smart home voice interface for the elderly: acceptability and objection aspects
+
+==== Sicherheitsabfragen
+Design and evaluation of a smart home voice interface for the elderly: acceptability and objection aspects
+
+==== Aktivierung
+==== Deaktivierung
 
 == Variabilitätsmodell
 image::graphics/FeatureModel.png[]
 image::graphics/ConfigEx.png[]
+
 
     
