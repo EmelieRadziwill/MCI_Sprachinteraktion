@@ -20,13 +20,50 @@ siehe Forschungsteil.adoc
 
 == Analyse der Anforderungen 
 === Funktionale Anforderungen
+
+*WakeWord-Erkennung oder Intervall Aktivierung:* Für die Aktivierung des Sprachassistenten gibt es mehrere Arten diesen zu aktivieren und dann zu bedienen. Bei der WakeWord wird wie bei üblichen Alternativen ein Wort oder Satz zum starten des Sprachassisten verwendet. Diese Funktion kann jedoch auch gänzlich ausgeschaltet werden, sodass der Assistent die ganze Zeit aktiv bleibt. Es besteht auch die Möglichkeit den Assistenten in bestimmten Intervallen von allein eine Konversation starten zu lassen um eine menschliche Interaktion zu simulieren.
+
+*Spracherkennung:* Die Aufgabe der Spracherkennung (Speech to Text) ist es Audiosignale in Text umzuwandeln. Dadurch können Befehle/Skills akustisch aufgerufen werden. 
+
+*Sprachausgabe/ Sprachsynthese:* Die Sprachausgabe (Text to Speech) soll einen vom Skill gelieferten Text in Audioform umwandeln und diesen so ausgeben, dass dieser von einem Menschen verstanden werden kann.  
+
+*anpassbare (Alexa-)Skills:* Ein oder mehrere Sprachinteraktionsskills deren Funktion anhand der Einstellung des Nutzers anpassbar sind. Damit sind Unterschiede bei der Eingabe des Nutzers oder der Ausgabe des Assistenten basierend auf den individuellen Vorgaben des Variabilitätsmodells gemeint. 
+
+*Recommendersystem:* Die Aufgabe des Recommendersystems ist es, nach Eingabe der persönlichen Daten des Nutzers, den Sprachassitenten zu konfigurieren. Die Konfiguration basierd auf den Daten mit denen das System trainiert wurde und den Vorgaben des Variabilitätsmodells. 
+
+*Variabilitätsmodell:* Das Variabilitätsmodell gibt vor welche Einstellungen zusammen oder ausschließend valide sind. Dabei bezieht es sich auf unser Featuremodell und nimmt Eingaben vom Benutzer oder dem Recommendersystem.
+
+*Hilfestellungen:* Der Sprachassistent soll in der Lage sein den Nutzer an Termine erinnern zu können und gelegentlich/ in gewissen Situationen spezielle "Sicherheitsfragen" zu stellen. Eine Beispiel wäre die Abfragung nach genommen Medikamenten. 
+
+ 
 === Nichtfunktionale Anforderungen
 
+
+*Fehlerrate:* Die Fehlerrate sollte sowohl bei der Spracherkennung, als auch bei der Aktivierung (WakeWord/Intervall), möglichst gering sein.
+
+*Skills:* Das Ziel ist es, eigene Skills entwickeln und in den Sprachassistenten einzubauen zu können. Diese Skills sollen dann durch mehere unterschiedliche Ausrufe ausführbar sein. 
+
+*Variable Antworten (Featuremodell):* Die Antworten sollten je nach Nutzer unterschiedlich sein. Diese können nach dem Featuremodell in den folgenden Punkten unterscheiden: Tonlage, Geschlecht, Lautstärke, Geschwindigkeit, Sprache, Sprechweise/ Slang, Komplexität, Dialekt und ob die Ausgabe Motivieren/ Loben soll. 
+
+*Qualität der Sprachausgabe:* Das Ziel der Sprachausgabe ist möglichst nah an ein menschliches Sprachbild ranzukommen und nicht wie ein Computer zu klingen.
+
 == Konzept
+
+Ziel ist es einen variablen Sprachassistenten für Senioren zu entwickeln, der über verschiedene Funktionen und Konfigurationen verfügt um die Bedienung einfacher für die individuellen Bedürfnisse des Nutzer zu gestalten.
+
 === Aufbau
+
+Nach einer Initialkonfiguration des Nutzers über Angaben wie Alter, Geschlecht, Bedürfnisse, Erkrankungen und Präferenzen soll das Recommendersystem anhand von vortrainierten Datensätzen valider Konfiguration einen zum Nutzer angepassten Vorschlag über die Einstellungen des Systems ausgeben. Diese Einstellungen können natürlich verworfen oder im Nachhinein individuell noch angepasst werden. (Funktionsweise basierend auf dem Recommender System vom vorherigen Semester, genaure Erklärung folgt, wenn dieses auf unsere Bedürfnisse angepasst wurde)
+
+Der eigentliche Sprachassistent unterscheidet sich grundlegend nicht viel von herkömmlichen Sprachassistenten. Zur Interaktion mit dem Assistenten kann man ihn entweder mit einem Wort oder einer Phrase "aufwecken" oder er bleibt permanent eingeschaltet. Alternativ ist es auch möglich, dass eine Konversation mit dem Benutzer angefangen wird. Nachdem die Spracherkennung aktiviert wurde kann man Anfragen stellen, die dann in Textform übersetzt und an das Programm weitergeleitet werden. Daraufhin wird dann erkannt um welche Abfrage es sich handelt und anhand der vom Nutzer festgelegten Präferenzen wird dann eine individuell angepasste Antwort formuliert. Diese wird im Nachhinein in der Sprachsynthese erneut mit gewünschten Präferenzen angepasst ausgegeben. Die Spracherkennung sowohl als auch die -ausgabe erfolgen mit Alexa.
+
 === Frameworks
+
+Recommender System Praktika letztes Semester
+
 === Komponenten
 
+Alexa
 
 == Produktaufbau/ -verwendung (Arbeitstitel)
 == Projektorganisation (Arbeitstitel)
