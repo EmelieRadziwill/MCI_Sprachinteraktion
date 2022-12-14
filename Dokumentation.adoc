@@ -16,6 +16,17 @@ Die Entwicklung eines für die Zielgruppe älterer Menschen
 anwendbaren Adaptionskonzepts für Sprachinteraktion basierend auf der Konfiguration von Feature-Modellen und der Konfigurationsauswahl durch ein Recommender-System.
 
 == Forschungsteil (Arbeitstitel)
-== technischer Aufbau (Arbeitstitel)
+siehe Forschungsteil.adoc
+
+== Analyse der Anforderungen 
+=== Funktionale Anforderungen
+=== Nichtfunktionale Anforderungen
+
+== Konzept
+=== Aufbau
+=== Frameworks
+=== Komponenten
+
+
 == Produktaufbau/ -verwendung (Arbeitstitel)
-== Teamaufbau Rollenverteilung (Arbeitstitel)
+== Projektorganisation (Arbeitstitel)
