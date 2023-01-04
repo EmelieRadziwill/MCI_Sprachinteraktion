@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="autolayoutconstraints" value="false"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showconstraints" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="vertical"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="4"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="Spráchassistent">
+			<and mandatory="true" name="Stimme">
+				<alt mandatory="true" name="Geschlecht">
+					<feature name="weiblich"/>
+					<feature name="männlich"/>
+				</alt>
+				<alt mandatory="true" name="Tonlage">
+					<feature name="tief"/>
+					<feature name="mittel"/>
+					<feature name="hoch"/>
+				</alt>
+				<alt mandatory="true" name="Art">
+					<feature name="natürlich"/>
+					<feature name="synthetisch"/>
+				</alt>
+				<alt mandatory="true" name="Lautstärke">
+					<feature name="1 - leise"/>
+					<feature name="2"/>
+					<feature name="3"/>
+					<feature name="4"/>
+					<feature name="5 - laut"/>
+				</alt>
+			</and>
+			<and mandatory="true" name="Spracheigenschaften">
+				<alt mandatory="true" name="Pause zwischen den Sätzen">
+					<feature name="keine"/>
+					<feature name="kurz"/>
+					<feature name="lang"/>
+				</alt>
+				<alt mandatory="true" name="Sprechgeschwindigkeit">
+					<feature name="langsam"/>
+					<feature name="durchschnittlich"/>
+				</alt>
+				<alt mandatory="true" name="Satzkomplexität">
+					<feature name="normal"/>
+					<feature name="vereinfacht"/>
+				</alt>
+				<feature name="vereinfachter Ausdruck"/>
+			</and>
+			<and mandatory="true" name="Kommunikationsstil">
+				<alt mandatory="true" name="Sprache">
+					<feature name="Deutsch"/>
+					<feature name="Englisch"/>
+				</alt>
+				<alt mandatory="true" name="Gesprächsorientierung">
+					<feature name="Aufgaben orientiert"/>
+					<feature name="Soziel orientiert"/>
+				</alt>
+				<alt mandatory="true" name="Anrede">
+					<feature name="Siezen"/>
+					<feature name="Duzen"/>
+				</alt>
+				<feature name="alternative Keywords"/>
+			</and>
+		</and>
+	</struct>
+</featureModel>

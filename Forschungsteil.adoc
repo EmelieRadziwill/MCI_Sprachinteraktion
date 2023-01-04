@@ -23,6 +23,8 @@ Exploring How Older Adults Use a Smart Speaker–Based Voice Assistant in Their 
 
 == Spezifikation der Zielgruppe 
 === User Model
+20-22% der Befölkerung in Deutschland über 65
+https://www.statista.com/statistics/624306/age-structure-in-germany/
 .Characteristics older adults
 [cols="1, 1"]
 |===
@@ -54,21 +56,29 @@ a| * alleine
 a| * ledig/ verwitwet
    * verheiratet
 
-|physische Gesundheit
-a| * keine
-   * Sehschwäche
-   * Hörschwäche
-   * eingeschränkte Beweglichkeit
-   * ...
-
-|kognitive Gesundheit
-a| * keine
-   * Dement
-
 |sozialer Support
 a| * keiner
    * wenig
    * viel
+
+|physische Funktionen
+a| * vollständig
+   * eingeschränkte Beweglichkeit
+   * ...
+
+|kognitive Funktionen
+a| * vollständig
+   * Dement
+
+|sensorische Funktionen
+a| * vollständig
+   * Sehschwäche (leicht - blind)
+   * Hörschwäche (leicht - taub)
+
+|medizinische Hilfsmittel
+a| * Hörgeräte
+   * Brille
+   * usw...
 |===
 
 === Personas
