@@ -17,11 +17,12 @@ anwendbaren, Adaptionskonzepts für Sprachinteraktion basierend auf der Konfigur
 
 == Weshalb ein VA für Senioren
 ISO/IEC Guide 71, 154-160 
-Exploring How Older Adults Use a Smart Speaker–Based Voice Assistant in Their First Interactions: Qualitative Study 
-
-
 
 == Spezifikation der Zielgruppe 
+Sehr variabel, da Senioren keine homogene Gruppe sind. 
+Wenn Menschen älter werden, verändern sich ihre Fähigkeiten. Dieser Prozess beinhaltet im Laufe der Zeit einen Rückgang der kognitiven, physischen und sensorischen Funktionen, und jede dieser Funktionen wird bei jedem Individuum mit unterschiedlichen Raten im Verhältnis zueinander abnehmen.
+Dieses Fähigkeitsmuster ist von Person zu Person sehr unterschiedlich, und mit zunehmendem Alter nimmt diese Variabilität zu. Darüber hinaus variieren die Fähigkeiten einer bestimmten Person kurzfristig, beispielsweise aufgrund einer vorübergehenden Funktionsminderung oder eines Funktionsverlusts aufgrund einer Vielzahl von Ursachen, darunter Krankheit, Blutzuckerspiegel und Bewusstseinszustand.
+
 === User Model
 20-22% der Befölkerung in Deutschland über 65
 https://www.statista.com/statistics/624306/age-structure-in-germany/
@@ -90,42 +91,38 @@ _Exploring How Older Adults Use a Smart Speaker–Based Voice Assistant in Their
 
 == Features des Sprachassistenten
 === Stimme
-==== Tonlage
-ISO/IEC Guide 103-104
+Muss anpassbar sein, häufig wird männlich, tiefe Tonlage, natürlich bevorzugt. Je nach Anwendung oder persönlicher Präferenz allerdings anders.
 
 ==== Geschlecht
+Männlich als default, oft bevorzugt vor Weiblich
+
+==== Tonlage
+Tiefere Tonlagen besser verständlich, vor allem bei Senioren mit Hörschädigung. 
+
+==== Art
+Natürliche Stimme als default, da bevorzugt
+
 ==== Lautstärke
 ISO/IEC Guide 71, s.79, 99, 103-104
 
 === Spracheigenschaften
-==== Sprechgeschwindigkeit
+=== Pause zwischen den Sätzen
+
+=== Sprechgeschwindigkeit
 ISO/IEC Guide 71, s.43
 
-==== Sprache
+=== Satzkomplexität
+
+=== vereinfachter Ausdruck
 
 === Kommunikationsstil
-==== Orientierung der Kommunikation
-User interactions with “Alexa” in public academic space.
-Design and evaluation of a smart home voice interface for the elderly: acceptability and objection aspects
+==== Sprache
 
-==== Sprechweise
-Anthropomorphisierendes Verhalten kann beabsichtigt sein und einer Person dabei helfen, einem unbekannten Objekt einen Sinn zu geben, das Gefühl der Unsicherheit zu verringern oder soziale Verbindungen herzustellen (Epley et al., 2007). 
-User interactions with “Alexa” in public academic space.
+==== Gesprächsorientierung
 
-==== Komplexität der Sätze
-==== Dialekt
+==== Anrede
 
-=== Verhalten
-==== Motivierung
-==== Hilfestellung
-ISO/IEC Guide 71, s.73
-Design and evaluation of a smart home voice interface for the elderly: acceptability and objection aspects
-
-==== Sicherheitsabfragen
-Design and evaluation of a smart home voice interface for the elderly: acceptability and objection aspects
-
-==== Aktivierung
-==== Deaktivierung
+=== alternative Keywords
 
 == Variabilitätsmodell
 image::graphics/FeatureModel.png[]
