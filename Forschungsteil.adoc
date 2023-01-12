@@ -18,20 +18,30 @@ toc::[]
 :numbered:
 
 == Einleitung
-=== Motivation
-=== Ziele
+
+=== Motivation und Ziel
+VAs könnten den Alltag von Senioren in vielerlei Hinsichten verbessern. Durch ihre hand und augen freie Interaktion eignen sie sich besonders um sich gut an die Bedürfnisse von Senioren anpassen zu lassen. Trotz vieler Vorteile werden sie oft abgelehnt. Daher soll ein adaptives Konzept entwickelt werden, welches der Zielgruppe die Annahme des VAs erleichtern soll
+
+Ziel ist die Analyse der Zielgruppe sowie ihre Anforderungen ein ein sprachbasiertes Interaktionsmedium, um dieses in ihren Altag zu integrieren
+
 === Aufbau
+Schaffung eines einheitlichen Kontext. Analyse der Zielgruppe. Erarbeitung der Anforderungen an ein solches System
+
 
 == Hintergrund
+Was sind Sprachassistenten?
+
+Weshalb werden diese von älteren Menschen abgelehnt?
+
 
 == Spezifikation der Zielgruppe 
-Sehr variabel, da Senioren keine homogene Gruppe sind. 
-Wenn Menschen älter werden, verändern sich ihre Fähigkeiten. Dieser Prozess beinhaltet im Laufe der Zeit einen Rückgang der kognitiven, physischen und sensorischen Funktionen, und jede dieser Funktionen wird bei jedem Individuum mit unterschiedlichen Raten im Verhältnis zueinander abnehmen.
-Dieses Fähigkeitsmuster ist von Person zu Person sehr unterschiedlich, und mit zunehmendem Alter nimmt diese Variabilität zu. Darüber hinaus variieren die Fähigkeiten einer bestimmten Person kurzfristig, beispielsweise aufgrund einer vorübergehenden Funktionsminderung oder eines Funktionsverlusts aufgrund einer Vielzahl von Ursachen, darunter Krankheit, Blutzuckerspiegel und Bewusstseinszustand.
+Senioren sind keine homogene Gruppe. Sie unterscheiden sich stark in fundamentalen Dingen, wie Einkommen, Bildung, Gesundheit, oder Interessen. Daher müssen viele Faktoren betrachtet werden um die Gruppe zu definieren.
+
 
 === User Model
-20-22% der Befölkerung in Deutschland über 65
-https://www.statista.com/statistics/624306/age-structure-in-germany/
+20-22% der Bevölkerung in Deutschland über 65
+https://www.destatis.de/EN/Service/Statistics-Visualised/age-pyramid-germany.html (Altersschnitt)
+https://www.destatis.de/DE/Presse/Pressemitteilungen/2022/09/PD22_N061_12_13.html (Einkommen)
 .Characteristics older adults
 [cols="1, 1"]
 |===

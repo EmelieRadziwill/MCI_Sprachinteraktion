@@ -3,15 +3,15 @@
 	<feature automatic="selected" name="Sprachassistent"/>
 	<feature automatic="selected" name="Stimme"/>
 	<feature automatic="selected" name="Geschlecht"/>
-	<feature name="weiblich"/>
-	<feature name="männlich"/>
+	<feature manual="selected" name="weiblich"/>
+	<feature automatic="unselected" name="männlich"/>
 	<feature automatic="selected" name="Tonlage"/>
-	<feature manual="selected" name="tief"/>
-	<feature automatic="unselected" name="mittel"/>
+	<feature automatic="unselected" name="tief"/>
+	<feature manual="selected" name="mittel"/>
 	<feature automatic="unselected" name="hoch"/>
 	<feature automatic="selected" name="Art"/>
-	<feature name="natürlich"/>
-	<feature name="synthetisch"/>
+	<feature automatic="unselected" name="natürlich"/>
+	<feature manual="selected" name="synthetisch"/>
 	<feature automatic="selected" name="Lautstärke"/>
 	<feature automatic="unselected" name="1 - leise"/>
 	<feature automatic="unselected" name="2"/>
@@ -26,7 +26,7 @@
 	<feature automatic="selected" name="Sprechgeschwindigkeit"/>
 	<feature automatic="unselected" name="langsam"/>
 	<feature manual="selected" name="durchschnittlich"/>
-	<feature automatic="selected" name="Satzkomplexität"/>
+	<feature automatic="selected" name="Satzlänge"/>
 	<feature automatic="unselected" name="normal"/>
 	<feature manual="selected" name="vereinfacht"/>
 	<feature name="vereinfachter Ausdruck"/>
