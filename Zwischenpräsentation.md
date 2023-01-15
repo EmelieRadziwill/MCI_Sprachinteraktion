@@ -1,19 +1,27 @@
 # Präsentation Stichpunkte
 ## Aufgabenstellung
-### Thema
+### Thema (Eric)
 Unser Praktikum beschäftigt sich mit der individualisierten Interaktion zwischen Mensch und Computer am Beispiel eines Sprachassistenten ausgelegt auf ältere Menschen und deren Bedürfnisse.
 
-Befölkerungsanteil von Senioren steigt stetig Anfang 2000 noch bei 17%, 2020 22%, VA durch Hand und Augenfreie Kommunikation besonders gut geeignet um einen Begleiter im Alltsg zu bieten. Ob einfachen Zugang zum Internet, unterstützen der täglichen Aufgaben oder sozialen Support. Je nach Skill ist dieser vielseitig Anwendbar. DOch was muss ein entsprechender Sprachassistent mitbringen?
+Bevölkerungsanteil von Senioren in DeutschesLand steigt stetig Anfang 2000 noch bei 17%, 2020 22%, VA durch Hand und Augenfreie Kommunikation besonders gut geeignet um einen Begleiter im Alltag zu bieten. Ob einfachen Zugang zum Internet, unterstützen der täglichen Aufgaben oder sozialen Support. Je nach Skill ist dieser vielseitig einsetzbar. Doch was muss ein entsprechender Sprachassistent mitbringen?
 
-### Ziele
+individualisierten Interaktion zwischen Mensch und Computer
+ausgelegt auf ältere Menschen und deren Bedürfnisse
+
+Bevölkerungsanteil von Senioren in DeutschesLand
+Anfang 2000 noch bei 17%, 2020 22%
+
+einfacher Zugang zum Internet, Unterstützung bei täglichen Aufgaben oder sozialer Support
+
+### Ziele (Max)
 Dementsprechend ist das Ziel die Entwicklung eines für die Zielgruppe älterer Menschen anwendbaren Adaptionskonzepts für Sprachinteraktion basierend auf der Konfiguration von Feature-Modellen und der Konfigurationsauswahl durch ein Recommender-System.
 
-## Lösungsidee
+## Lösungsidee (Max)
 Die Umsetzung unterteilt sich in vier Teilschritte:
 
 Analyse der Zielgruppe: Sammeln und Auswerten von Demografischen Daten sowie Studien. Erstellung eines User Model sowie Personas.
 
-Design eines Feature-Model: Anforderungsanalyse anhand des User-Model, sowie Publikationen über verwandte Arbeiten.
+Design eines Feature-Model: Anforderungsanalyse anhand des User-Model, sowie Publikationen über verwandte Arbeiten(Sprachassistent).
 
 Entwicklung eines Recommender-System: KNN-Algorithmus entwicklen, auf den Personas basierend Traingsdaten erstelllen und damit das System anlernen
 
@@ -43,30 +51,36 @@ Spracheigenschaft definiert die Sprechweise, ob Pause zwischen den Sätzen für 
 
 Kommunikationsstil fokussiert sich auf Sprache und Umgang zwischen VA und Nutzer, beispielsweise welche Anredeform bevorzugt wird, oder ob sich das System nur auf die Aufgaben beschränken soll oder sozialer agiert. Ebenfalls die möglichkeit zu Alternativen Keywords (Wake up, Abfragen von funktionen) um nicht mit den Sprachgewohnheiten des Nutzers zu brechen. 
 
-### Entwicklung eines Recommender-System
-basierend auf dem Recommender-System von vorherigen Praktikum
+### Entwicklung eines Recommender-System (Eric)
+basierend auf dem Recommender-System von vorherigen Praktikum angepasst auf unseren Kontext (nearest neighbour)
 
-"gefüttert" mit Trainingssätzen --> Personas/Forschungsergebnisse(Analyse Zielgruppe)
+Datensätze vorerst vom Vorpraktikum (Testzwecke)
 
-nach Initialfragestellungen gibt Recommender basierend auf KNN eine für ihn sinvolle Konfiguration aus
+Erstellung/Auswahl eigener Profile
+
+wird später "gefüttert" mit Trainingssätzen --> Personas/Forschungsergebnisse(Analyse Zielgruppe)
+
+Vorschlag vom Recommender generieren
 
 Nutzer kann beliebige Einstellungen übernehmen
 
-seperate Funktion überprüft Validität der Konfiguration (Featuremodell)
+Welche Initialeinstellungen sind relevant für welche Konfigurationen? 
+
+nach Initialfragestellungen gibt Recommender basierend auf KNN eine für ihn sinvolle Konfiguration aus
 
 
-### Herausforderungen
-Zielgruppe: Wo nimmt man Daten her und was ist davon dann wichtig? Wenig vorerfahrung, Demografische Daten kaum findbar, Studien hatten meistens die gleiche Kernaussage. 
+### Herausforderungen (Max)
+Zielgruppe: Wo nimmt man Daten her und was ist davon dann wichtig? Wenig vorerfahrung, Demografische Daten kaum findbar, Studien hatten meistens die gleiche Kernaussage.Neugier da, langfristig useless 
 
 Feature Model: Welche Features sind überhaupt umsetzbar und was ist Skill und was Feature? 
 
-Recommender System: Wie mache ich aus einer Persona eine Konfiguration, wie setzt man an?
+Recommender System: Welche Eigenschaften der Personen sind auschlaggebend für die Konfiguration. Wie realistisch umsetzen. 
 
 Teamarbeit: Austritt eines Teammitglied, umverteilung der Aufgaben. Aufgaben analyse, unterschiedliche Interpretationen und Kommunikationsschwierigkeiten.
 
 Zeitmanagement: Abschätzung des Arbeitsaufwands und planen der Sprints
 
-## Zeitplan und nächste Schritte
+## Zeitplan und nächste Schritte(Max)
 
 Ab dem 10.11.2022: Einarbeitung in frühere Arbeiten und Analyse der Zielgruppe. 
     - Recommender System und Mycroft Sprachassistent
@@ -76,7 +90,7 @@ Ab dem 05.01.2023: Personas erstellen, weitere Ausarbeitung des Feature Modell s
 
 Die weiter geplanten Schritte sind die fertigstellung des Recommender Systems, die implementierung des Skills zum proof of concept und das ausarbeiten der Dokumentation
 
-## Demo
+## Demo (Eric)
 
 ## Fragen für die Diskussion
 
