@@ -3,6 +3,8 @@
 ### Thema
 Unser Praktikum beschäftigt sich mit der individualisierten Interaktion zwischen Mensch und Computer am Beispiel eines Sprachassistenten ausgelegt auf ältere Menschen und deren Bedürfnisse.
 
+Befölkerungsanteil von Senioren steigt stetig Anfang 2000 noch bei 17%, 2020 22%, VA durch Hand und Augenfreie Kommunikation besonders gut geeignet um einen Begleiter im Alltsg zu bieten. Ob einfachen Zugang zum Internet, unterstützen der täglichen Aufgaben oder sozialen Support. Je nach Skill ist dieser vielseitig Anwendbar. DOch was muss ein entsprechender Sprachassistent mitbringen?
+
 ### Ziele
 Dementsprechend ist das Ziel die Entwicklung eines für die Zielgruppe älterer Menschen anwendbaren Adaptionskonzepts für Sprachinteraktion basierend auf der Konfiguration von Feature-Modellen und der Konfigurationsauswahl durch ein Recommender-System.
 
@@ -54,7 +56,7 @@ seperate Funktion überprüft Validität der Konfiguration (Featuremodell)
 
 
 ### Herausforderungen
-Zielgruppe: Wo nimmt man daten her und was ist davon dann wichtig? Wenig vorerfahrung
+Zielgruppe: Wo nimmt man Daten her und was ist davon dann wichtig? Wenig vorerfahrung, Demografische Daten kaum findbar, Studien hatten meistens die gleiche Kernaussage. 
 
 Feature Model: Welche Features sind überhaupt umsetzbar und was ist Skill und was Feature? 
 
@@ -67,6 +69,8 @@ Zeitmanagement: Abschätzung des Arbeitsaufwands und planen der Sprints
 ## Zeitplan und nächste Schritte
 
 Ab dem 10.11.2022: Einarbeitung in frühere Arbeiten und Analyse der Zielgruppe. 
+    - Recommender System und Mycroft Sprachassistent
+
 Ab dem 15.12.2022: Feature Modell anfangen und Analyse der Anforderungen für das Recommender Systen
 Ab dem 05.01.2023: Personas erstellen, weitere Ausarbeitung des Feature Modell sowie beginn des Recommender System
 
