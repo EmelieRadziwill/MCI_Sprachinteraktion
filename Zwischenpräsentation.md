@@ -1,4 +1,6 @@
 # Präsentation Stichpunkte
+## Einleitung (Emelie)
+### Inhalt (Eric?, Max?)
 ## Aufgabenstellung
 ### Thema (Eric)
 Unser Praktikum beschäftigt sich mit der individualisierten Interaktion zwischen Mensch und Computer am Beispiel eines Sprachassistenten ausgelegt auf ältere Menschen und deren Bedürfnisse.
@@ -28,28 +30,36 @@ Entwicklung eines Recommender-System: KNN-Algorithmus entwicklen, auf den Person
 Exemplarische Anwendung (Prototyp): beispielhafte Darstellung mithilfe eines Sprachskills (durch Voreinstellungen individualisiert)
 
 ## Aktueller Stand
-### Analyse der Zielgruppe
-22% der Bevölkerung in Deutschland ist über 65. Durch die Größe der Zielgruppe entsteht eine Vielfalt in den Charackteristiken. 
+### Analyse der Zielgruppe (Emelie)
+Zur Analyse der Zielgruppe wurden verschiedene demografische Daten und Studien gesammelt und ausgewertet. Das Resultat war eindeutig uneindeutig, mit anderen Worten: Senioren sind keine homogene Gruppe. 
 
-So unterscheiden sich Senioren nicht nur in vermeintlich offensichtlichen Punkten wie der Wohnsituation, dem Familienstand, Gesundheit, und der Höhe des Einkommen. Sondern ebenfalls in Punkten wie den technischen Vorkenntnissen die sie mitbringen, ihren Altagsgewohnheiten und ihrem allgemeinen Bildungsstand. 
+22% der Bevölkerung in Deutschland ist über 65, bei 83 Millionen Menschen sind das etwas über 18 Millionen. Durch die Größe der Zielgruppe entsteht entsprechend eine Vielfalt in den Charackteristiken. 
 
-Auch ist zu berücksichtigen, das einige Merkmale einen Einfluss auf andere Merkmale haben. Beispielsweise beeinflussen Bildungsstand und Einkommen, das Gesundheitsempfinden.
+Neben den offensichtlichen Punkten wie Geschlecht und Alter, variieren vor allem das Einkommen (Wie viel steht monatlich zur Verfügung und woher kommt es?), der Bildungsstand (gemessen an Abschlüssen), die Wohnsituation (Haushaltsgröße oder Heim) und der Familienstand (verheiratet, ledig/verwitwet). 
 
-Auch steigt die Anzahl der Senioren bei den Gasthöhrern an Hochschulen. Wintersemester 2004/2005 bei 22% Senioren unter Gasthörern und Wintersemester 2014/2015 42%. Dadurch zeigt sich, das zumindest ein Teil wissbegierig und offen für neue Informationen ist.
+Ebenfalls korrelieren einige der Faktoren, beispielsweise tendieren Einkommensstärkere Senioren, oder solche mit höherem Bildungsgrad, dazu sich länger gesundheitlich Fit zu fühlen, was sich wiederum auf das Allgemeinbefinden positiv auswirkt.
 
-Auch Gesundheitlich enorme Unterschiede. Ob kognitiv, snsorisch oder physisch, jeder Senior definiert sich über andere Einschränkungen, welche berücksichtigt werden müssen, um ihm seinen Alltag so leicht wie möglich zu gestalten. 
-Besonders häufig vertreten sind Seh- und Hörschwächen, eingeschränkte Beweglichkeiten und eine verminderte Anpassungsfähigkeit
+Etwas, das die gesammte Zielgruppe betrifft, ist der umgangssprachliche Altersstarrsinn, mit zunehmendem Alter verringert sich die Aufnahme- und Anpassungsfähigkeit, sowie die geistige flexibilität. Aud die natürliche Neugierde und den Wissenddrang hat dies jedoch keinen Einfluss. So stieg beispielsweise die Anzahl der Senioren unter den Gasthöhrern an Hochschulen. Wintersemester 2004/2005 lag diese noch bie bei 22%, Wintersemester schon bei 2014/2015 42%. 
 
-Dazu wurden Personas anhand von Studien und Demografischen Daten Entwickelt. Zwei Beispiele hier: Neugierde und Starsinn veranschaulicht
+Auch Gesundheitlich gibt es enorme Unterschiede. Ob kognitiv, snsorisch oder physisch, jeder Senior definiert sich über andere Einschränkungen in anderen Ausmaßen, welche berücksichtigt werden müssen, um ihm seinen Alltag so leicht wie möglich zu gestalten. 
+Besonders häufig vertreten sind Seh- und Hörschwächen, eingeschränkte Beweglichkeiten und Vergesslichkeit auf. 
 
-### Design eines Feature-Model
+Zur besseren Veranschaulichkeit, wurde Personas entwickelt, zwei sind hier vorgestellt. Diese sind nach Charaktertypen gestaltet und angelehnt an eine Studie, welche die Reaktionen von älteren Menschen auf Sprachassistenten untersuchte. 
+
+Da wäre zum einen der sprunghafte und neugierige Typ, hier personifiziert als Giesela. Häufig hat dieser Personentyp schon erste Erfahrungen mit technischen Geräten gemacht und ist meist motiviert, sich damit auseinander zu setzen. Auch wenn es häufig am technischen Verständnis hakt.
+
+Das genaue Gegenteil ist Herbert, dieser Typ ist ehr nachdenklich und primär skeptisch und ablehnent Gegenüber Technik. Vor allem die Akzeptanz ist ein Problem, auch wenn die Vorteile eines solchen Systems gesehen werden, gibt es nur wenig Vertrauen. 
+
+### Design eines Feature-Model (Emelie)
+Mittels der Nutzeranalyse, wurde ein Feature Modell konzipiert.
+
 Unterteilung in drei Gruppen: Stimme, Spracheigenschaften und Kommunikationsstil.
 
-Stimme soll möglichst gut verständlich und subjektiv angenehm sein. Unterscheidung von Geschlecht, Tonlage, Stimmart und Lautstärke. Je nach Präferenzen des Nutzers. Systeme werden ehr angenommen, wenn der Nutzer sie als Angenehm empfindet. Häufig werden männliche tiefe Stimmen bevorzugt, jedoch auch identifizierung wichtig je nach Charakter. 
+Stimme soll möglichst gut verständlich und subjektiv angenehm sein. Unterscheidung von Geschlecht (männlich, weiblich), Tonlage (tief, mittel, hoch), Stimmart (natürlich, syntetisch) und Lautstärke (Skala 1-5 Repräsentativ). Je nach Präferenzen des Nutzers. Systeme werden ehr angenommen, wenn der Nutzer sie als Angenehm empfindet. Häufig werden männliche tiefe Stimmen bevorzugt, jedoch auch identifizierung wichtig je nach Charakter. 
 
-Spracheigenschaft definiert die Sprechweise, ob Pause zwischen den Sätzen für besseres Folgen der Konversation nötig sind, die allgemeine Sprechgeschwindigkeit oder die länge der Sätze. Sowie die zusätzliche möglichkeit den Ausdruck zu vereinfachen um die Komplexität möglicher Antworten zu verringern. Je nach dem wie geistig Fit die Nutzer sind kann dies das Sprachverständnis fördern
+Spracheigenschaft definiert die Sprechweise des VA, ob Pause zwischen den Sätzen, für besseres Folgen der Konversation, nötig sind, die allgemeine Sprechgeschwindigkeit (durchschnittlich, verlangsamt) oder die länge der Sätze potenziell verkürzt wird. Sowie die zusätzliche möglichkeit den Ausdruck zu vereinfachen um die Komplexität möglicher Antworten zu verringern. Je nach dem wie geistig Fit die Nutzer sind kann dies das Sprachverständnis fördern
 
-Kommunikationsstil fokussiert sich auf Sprache und Umgang zwischen VA und Nutzer, beispielsweise welche Anredeform bevorzugt wird, oder ob sich das System nur auf die Aufgaben beschränken soll oder sozialer agiert. Ebenfalls die möglichkeit zu Alternativen Keywords (Wake up, Abfragen von funktionen) um nicht mit den Sprachgewohnheiten des Nutzers zu brechen. 
+Kommunikationsstil fokussiert sich auf Sprache und Umgang zwischen VA und Nutzer, beispielsweise welche Anredeform bevorzugt wird, oder ob sich das System nur auf die Aufgaben beschränken soll oder sozialer agiert. Ebenfalls die Möglichkeit zu alternativen Keywords (Wake up, Abfragen von Funktionen) um nicht mit den Sprachgewohnheiten des Nutzers zu brechen. 
 
 ### Entwicklung eines Recommender-System (Eric)
 basierend auf dem Recommender-System von vorherigen Praktikum angepasst auf unseren Kontext (nearest neighbour)
