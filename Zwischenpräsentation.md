@@ -1,6 +1,6 @@
 # Präsentation Stichpunkte
 ## Einleitung (Emelie)
-### Inhalt (Eric?, Max?)
+### Inhalt (Eric)
 ## Aufgabenstellung
 ### Thema (Eric)
 Unser Praktikum beschäftigt sich mit der individualisierten Interaktion zwischen Mensch und Computer am Beispiel eines Sprachassistenten ausgelegt auf ältere Menschen und deren Bedürfnisse.
