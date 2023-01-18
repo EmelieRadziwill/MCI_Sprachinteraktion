@@ -11,9 +11,9 @@ individualisierten Interaktion zwischen Mensch und Computer
 ausgelegt auf ältere Menschen und deren Bedürfnisse
 
 Bevölkerungsanteil von Senioren in DeutschesLand
-Anfang 2000 noch bei 17%, 2020 22%
+Sprachassistenten bieten eine augenfreie Kommunikation mit Systemen die den Alltag erleichtern
 
-einfacher Zugang zum Internet, Unterstützung bei täglichen Aufgaben oder sozialer Support
+einfacher Zugang zum Internet, Unterstützung bei täglichen Aufgaben, sozialer Support oder einfach nur die Erinnerung an Termine 
 
 ### Ziele (Max)
 Dementsprechend ist das Ziel die Entwicklung eines für die Zielgruppe älterer Menschen anwendbaren Adaptionskonzepts für Sprachinteraktion basierend auf der Konfiguration von Feature-Modellen und der Konfigurationsauswahl durch ein Recommender-System.
@@ -62,22 +62,24 @@ Spracheigenschaft definiert die Sprechweise des VA, ob Pause zwischen den Sätze
 Kommunikationsstil fokussiert sich auf Sprache und Umgang zwischen VA und Nutzer, beispielsweise welche Anredeform bevorzugt wird, oder ob sich das System nur auf die Aufgaben beschränken soll oder sozialer agiert. Ebenfalls die Möglichkeit zu alternativen Keywords (Wake up, Abfragen von Funktionen) um nicht mit den Sprachgewohnheiten des Nutzers zu brechen. 
 
 ### Entwicklung eines Recommender-System (Eric)
-basierend auf dem Recommender-System von vorherigen Praktikum angepasst auf unseren Kontext (nearest neighbour)
+
+aufbauend auf dem Recommender-System von vorherigen Praktikum (nearest neighbour)
+
+Prototyp zunächst in Python geschrieben(Forschungsergebnisse noch nicht implementiert)
+
+sklearn für KNN benutzt
 
 Datensätze vorerst vom Vorpraktikum (Testzwecke)
 
-Erstellung/Auswahl eigener Profile
+Trainingsdaten müssen Profile und Konfigurationen beinhalten um das Modell vom KNN zu trainieren
 
-wird später "gefüttert" mit Trainingssätzen --> Personas/Forschungsergebnisse(Analyse Zielgruppe)
+wird später "gefüttert" mit eigenen Trainingssätzen --> Personas/Forschungsergebnisse(Analyse Zielgruppe)
+
+Erstellung/Auswahl eigener Profile
 
 Vorschlag vom Recommender generieren
 
 Nutzer kann beliebige Einstellungen übernehmen
-
-Welche Initialeinstellungen sind relevant für welche Konfigurationen? 
-
-nach Initialfragestellungen gibt Recommender basierend auf KNN eine für ihn sinvolle Konfiguration aus
-
 
 ### Herausforderungen (Max)
 Zielgruppe: Wo nimmt man Daten her und was ist davon dann wichtig? Wenig vorerfahrung, Demografische Daten kaum findbar, Studien hatten meistens die gleiche Kernaussage.Neugier da, langfristig useless 
