@@ -20,25 +20,27 @@ toc::[]
 == Einleitung
 
 === Motivation und Ziel
-VAs könnten den Alltag von Senioren in vielerlei Hinsichten verbessern. Durch ihre hand und augen freie Interaktion eignen sie sich besonders um sich gut an die Bedürfnisse von Senioren anpassen zu lassen. Trotz vieler Vorteile werden sie oft abgelehnt. Daher soll ein adaptives Konzept entwickelt werden, welches der Zielgruppe die Annahme des VAs erleichtern soll
+// Warum wird sowas benötigt
+In den letzen Jahrzehnten entwickeln sich technische Systeme zunehmend schneller. Den Nutzern werden dabei immer neue Möglichkeiten geboten mit der virtuellen Welt in Kontakt zu treten. Ob über den Computer, das Smartphone, den Fernsehr oder die Armbanduhr, die Verbindung zum Internet ist ein stetiger Begleiter im Alltag. Dch mit zumnehmender technologischer Entwicklung, werden die Geräte nicht nur vielseitiger, sondern komplexer zu bedienen. Insbesondere für ältere Menschen stellt dies eine Hürde dar welche viele von der Nutzung Abschreckt. 
+Um den Zugang zu modernen Technologien zu vereinfachen, soll daher im Rahmen dieses Forschungsprojektes ein Adaptionskonzept entworfen werden. Zugeschnitten auf die Bedürfnisse von Senioren, soll dies die initiale Konfiguration des Systems ersetzen. So würde zum einen der Einstieg zur Benutzung des Systems erleichtert werden, ebenso wie das individuelle Nutzererlebniss verbessert werden.
 
-Ziel ist die Analyse der Zielgruppe sowie ihre Anforderungen ein ein sprachbasiertes Interaktionsmedium, um dieses in ihren Altag zu integrieren
+Wir haben uns zu der Umsetzung am Beispiel eines Sprachassistenten entschieden, da dieser durch die Hand- und Augenfreie Interaktion nicht nur zwei potenzielle Barrieren umgeht, sondern durch Variable Skills viel Potential bietet, den Alltag der älteren Bevölkerung zu bereichern. 
 
 === Aufbau
-Schaffung eines einheitlichen Kontext. Analyse der Zielgruppe. Erarbeitung der Anforderungen an ein solches System
+// Wie ist die Erarbeitung aufgebaut
+Das Adaptionskonzept soll mittels eines Recommendersystems, basierend auf einem KNN-Algorithmus, eine Konfiguration vorschlagen, welche auf der Zuordnung von Personendaten zu Features basiert. Dazu wird zuerst eine Zielgruppenanlyse erfolgen, worauf basierend Personas, Szenarien, Anwendungsfälle und Mentale Modelle erstellt werden. Anhand dessen wird ein Featuremodell erstellt und Trainingsdaten konzipiert, welche aus Zuordnungen aus paarweise Persona und Konfiguration bestehen.
 
 
 == Hintergrund
-Was sind Sprachassistenten?
-
-Weshalb werden diese von älteren Menschen abgelehnt?
-
+// Was sind Sprachassistenten
+// Senioren und Technik
+// Evtl bisherige Arbeiten
+TODOOO
 
 == Spezifikation der Zielgruppe 
+// Alle Charakteristiken der Zielgruppe aufgeschrieben, Unterscheidung dynamische und statische Eigenschaften
 Senioren sind keine homogene Gruppe. Sie unterscheiden sich stark in fundamentalen Dingen, wie Einkommen, Bildung, Gesundheit, oder Interessen. Daher müssen viele Faktoren betrachtet werden um die Gruppe zu definieren.
 
-
-=== User Model
 20-22% der Bevölkerung in Deutschland über 65
 https://www.destatis.de/EN/Service/Statistics-Visualised/age-pyramid-germany.html (Altersschnitt)
 https://www.destatis.de/DE/Presse/Pressemitteilungen/2022/09/PD22_N061_12_13.html (Einkommen)
@@ -98,38 +100,73 @@ a| * Hörgeräte
    * usw...
 |===
 
+== User Model
 === Personas
 image::graphics/Persona-1.png[]
 image::graphics/Persona-2.png[]
 
-_Exploring How Older Adults Use a Smart Speaker–Based Voice Assistant in Their First Interactions: Qualitative Study_
+_Exploring How Older Adults Use a Smart Speaker-Based Voice Assistant in Their First Interactions: Qualitative Study_
 
+=== Szenarien
+
+=== Anwendungsfälle
+
+=== Mentae Modelle
 
 == Features des Sprachassistenten
+:hardbreaks-option:
 === Stimme
-Muss anpassbar sein, häufig wird männlich, tiefe Tonlage, natürlich bevorzugt. Je nach Anwendung oder persönlicher Präferenz allerdings anders.
+Muss anpassbar sein, häufig wird männlich, tiefe Tonlage, natürlich bevorzugt. Je nach Anwendung oder persönlicher Präferenz allerdings anders. 
 
 ==== Geschlecht
 Männlich als default, oft bevorzugt vor Weiblich
+[1] Alter 76-94, Durchschn.: 87
+Hälfte weiblich bevorzugt, Hälfte egal, einer männlich
+[4] 8 Senioren, Durchschn.: 79
 
-==== Tonlage
-Tiefere Tonlagen besser verständlich, vor allem bei Senioren mit Hörschädigung. 
+==== Tonlage (Pitch)
+Mittel = Normale Tonlage
+Tief = Pitch der Stimme um 10% gesenkt
+Tiefere Tonlagen besser verständlich, vor allem bei Menschen mit Hörschädigung. 
+[1] Alter 76-94, Durchschn.: 87
+[3] Alter 53-63, Hörgeschädigt mit Hilfsmittel
 
 ==== Art
-Natürliche Stimme als default, da bevorzugt
+Natürliche Stimme als default, da bevorzugt (32 Senioren, über 93% natürlich) 
+Syntetische Stimme 
+
+[4] 8 Senioren, Durchschn.: 79 
+[5] 32 Senioren älter 65
 
 ==== Lautstärke
-ISO/IEC Guide 71, s.79, 99, 103-104
+Lautstärkeeinstellung notwendig 
+
+[3] Alter 53-63, Hörgeschädigt mit Hilfsmittel 
+(ISO/IEC Guide 71, s.79, 99, 103-104)
 
 === Spracheigenschaften
 === Pause zwischen den Sätzen
+Nach Anweisungen sind anderthalbfache Reaktionszeit zu lassen und Pausen zwischen den Sätzen fördern Akzeptanz. (Default weil ISO)
+[2]
 
 === Sprechgeschwindigkeit
-ISO/IEC Guide 71, s.43
+Durchschnittlich: 140-170 Wörter pro Minute
+Langsam: durchschnittliche Sprechgeschwindigkeit um 10% verringert
+Vor allem bei Hörgeschädigten ist die Sprechgeschwindigkeit zu verringern, für "normale" Senioren durchschnittliche Geschwindigkeit halten 
+[1] Alter 76-94, Durchschn.: 87 
+[2] 
+[3] Alter 53-63, Hörgeschädigt mit Hilfsmittel 
 
-=== Satzkomplexität
+=== Satzlänge
+Normal = normale Satzstruktur
+Vereinfacht = keine konkatenierten Sätze
+Für Hörgeschädigte die Satzlänge ggf veringern, da konkatenierte Sätze mehr Potential bieten Wörter zu überhören 
+
+[3] Alter 53-63, Hörgeschädigt mit Hilfsmittel
 
 === vereinfachter Ausdruck
+Kurze einfache Aussagen sind besser im Gedächtnis zu behalten 
+[6] 30 Senioren Durchschn.: 81
 
 === Kommunikationsstil
 ==== Sprache
@@ -137,6 +174,10 @@ ISO/IEC Guide 71, s.43
 ==== Gesprächsorientierung
 
 ==== Anrede
+Du-Form (Default)
+Sie-Form
+Du-Form häufig bevorzugt (Initiale Unterhaltung trotzdem in Sie-Form)
+[4] 8 Senioren, Durchschn.: 79 
 
 === alternative Keywords
 
@@ -145,10 +186,61 @@ image::graphics/FeatureModel.png[]
 image::graphics/ConfigEx.png[]
 
 
-== Zusammenfassung
+== Trainingsdaten
+
+=== Persona
+Hörgeschädigte weniger lange Sätze oder langsamere Sprechgeschwindigkeit, tief, männlich
+natürlich > syntetisch
+je älter desto kürzer sollen sätze sein
+entweder bevorzugt männliche stimmen oder nach nutzerähnlichkeit
+kleineres vocabular bevorzugt
+
+Was soll noch abgefragt werden?
+
+[cols="1, 1"]
+|===
+|ID
+|id
+
+|Name
+|Mustername
+
+|Geschlecht
+a| * männlich
+   * weiblich 
+
+|Alter
+|≥ 65
+   
+|Hörgerät
+a| * ja
+   * nein
+
+|technische Vorkenntnisse
+a| * ja
+   * nein
+
+|===
+
+
+// Darstellung bzw Belegung des Zusammenhang zwischen Personas und Konfiguration
+// Als CSV Datei
 
 == Fazit
 
 == Ausblick
 
-    
+== Quellen (unformatiert)
+:hardbreaks-option:
+
+[1] Exploring Traditional Phones as an E-Mail Interface for Older Adults
+https://dl.acm.org/doi/pdf/10.1145/2839303
+[2] Ergonomische Daten und Leitlinien für die Anwendung des ISO/IEC Guide 71 für Produkte und Dienstleistungen zur Berücksichtigung der Belange älterer und behinderter Menschen (ISO/TR 22411:2008)
+[3]Understanding the Needs and Challenges of Using Conversational Agents for Deaf Older Adults
+https://dl.acm.org/doi/pdf/10.1145/3311957.3359487
+[4] Design and evaluation of a smart home voice interface for the elderly: acceptability and objection aspects
+https://doi.org/10.1007/s00779-011-0470-5
+[5] Multiple Voices, Multiple Choices: Older Adults' Evaluation of Speech Output to Support Independent Living
+https://journal.gerontechnology.org/archives/607-609-1-PB.pdf
+[6] Speech Output for Older Visually Impaired Adults
+https://link.springer.com/chapter/10.1007/978-1-4471-0353-0_31
