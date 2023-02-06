@@ -188,7 +188,7 @@ image::graphics/ConfigEx.png[]
 
 == Trainingsdaten
 
-=== Persona
+=== Profil
 Hörgeschädigte weniger lange Sätze oder langsamere Sprechgeschwindigkeit, tief, männlich
 natürlich > syntetisch
 je älter desto kürzer sollen sätze sein
@@ -201,6 +201,10 @@ Was soll noch abgefragt werden?
 |===
 |ID
 |id
+
+|Sprache
+a| * Deutsch
+   * Englisch
 
 |Name
 |Mustername
