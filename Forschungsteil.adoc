@@ -106,12 +106,7 @@ image::graphics/Persona-1.png[]
 image::graphics/Persona-2.png[]
 
 _Exploring How Older Adults Use a Smart Speaker-Based Voice Assistant in Their First Interactions: Qualitative Study_
-
-=== Szenarien
-
-=== Anwendungsfälle
-
-=== Mentae Modelle
+// evtl Szenarien einfügen
 
 == Features des Sprachassistenten
 :hardbreaks-option:
@@ -189,41 +184,48 @@ image::graphics/ConfigEx.png[]
 == Trainingsdaten
 
 === Profil
-Hörgeschädigte weniger lange Sätze oder langsamere Sprechgeschwindigkeit, tief, männlich
-natürlich > syntetisch
-je älter desto kürzer sollen sätze sein
-entweder bevorzugt männliche stimmen oder nach nutzerähnlichkeit
-kleineres vocabular bevorzugt
 
-Was soll noch abgefragt werden?
-
-[cols="1, 1"]
+[%header, cols="1, 1, 1"]
 |===
+|Attribut
+|Beispiel
+|Beschreibung
+
 |ID
 |id
+|Zuordnen zwischen Profil und Konfiguration
 
 |Sprache
 a| * Deutsch
    * Englisch
+|Systemsprache 
 
 |Name
 |Mustername
+|Name des Nutzers. Darf nicht als Attribut zur Zuordnung im KNN verwendet werden.
 
 |Geschlecht
 a| * männlich
    * weiblich 
+|Geschlecht des Nutzers
 
 |Alter
 |≥ 65
+|Alter des Nutzers
    
 |Hörgerät
 a| * ja
    * nein
+|Verwendet der Nutzer ein Hörgerät?
 
 |technische Vorkenntnisse
 a| * ja
    * nein
+|Hat der Nutzer technische Vorkentnisse?
 
+|alternative Keywords
+|Licht an = Beispiel
+|Bleibt leer falls keine verwendet werden. Darf nicht als Attribut zur Zuordnung im KNN verwendet werden.
 |===
 
 
