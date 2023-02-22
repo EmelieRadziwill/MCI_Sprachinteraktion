@@ -1,4 +1,4 @@
-ID;Geschlecht;Tonlage;Art;Lautstärke;Sprache;Gesprächsorientierung;Anrede;alternative Keywords;Satzpause;Sprechgeschwindigkeit;Satzlänge;Ausdruck
+ID;Geschlecht;Tonlage;Klang;Lautstärke;Sprache;Gesprächsorientierung;Anrede;alternative Keywords;Satzpause;Sprechgeschwindigkeit;Satzlänge;Ausdruck
 1;männlich;tief;natürlich;3;Deutsch;Aufgaben orientiert;Du;;kurz;langsam;vereinfacht;nein
 2;männlich;tief;natürlich;3;Deutsch;Aufgaben orientiert;Du;;kurz;langsam;vereinfacht;nein
 3;männlich;tief;natürlich;3;Deutsch;Aufgaben orientiert;Du;;kurz;langsam;vereinfacht;nein
