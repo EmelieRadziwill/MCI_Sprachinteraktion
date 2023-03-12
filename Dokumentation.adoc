@@ -21,8 +21,6 @@ siehe Forschungsteil.adoc
 == Analyse der Anforderungen 
 === Funktionale Anforderungen
 
-*WakeWord-Erkennung oder Intervall Aktivierung:* Für die Aktivierung des Sprachassistenten gibt es mehrere Arten diesen zu aktivieren und dann zu bedienen. Bei der WakeWord wird wie bei üblichen Alternativen ein Wort oder Satz zum starten des Sprachassisten verwendet. Diese Funktion kann jedoch auch gänzlich ausgeschaltet werden, sodass der Assistent die ganze Zeit aktiv bleibt. Es besteht auch die Möglichkeit den Assistenten in bestimmten Intervallen von allein eine Konversation starten zu lassen um eine menschliche Interaktion zu simulieren.
-
 *Spracherkennung:* Die Aufgabe der Spracherkennung (Speech to Text) ist es Audiosignale in Text umzuwandeln. Dadurch können Befehle/Skills akustisch aufgerufen werden. 
 
 *Sprachausgabe/ Sprachsynthese:* Die Sprachausgabe (Text to Speech) soll einen vom Skill gelieferten Text in Audioform umwandeln und diesen so ausgeben, dass dieser von einem Menschen verstanden werden kann.  
@@ -32,12 +30,8 @@ siehe Forschungsteil.adoc
 *Recommendersystem:* Die Aufgabe des Recommendersystems ist es, nach Eingabe der persönlichen Daten des Nutzers, den Sprachassitenten zu konfigurieren. Die Konfiguration basierd auf den Daten mit denen das System trainiert wurde und den Vorgaben des Variabilitätsmodells. 
 
 *Variabilitätsmodell:* Das Variabilitätsmodell gibt vor welche Einstellungen zusammen oder ausschließend valide sind. Dabei bezieht es sich auf unser Featuremodell und nimmt Eingaben vom Benutzer oder dem Recommendersystem.
-
-*Hilfestellungen:* Der Sprachassistent soll in der Lage sein den Nutzer an Termine erinnern zu können und gelegentlich/ in gewissen Situationen spezielle "Sicherheitsfragen" zu stellen. Eine Beispiel wäre die Abfragung nach genommen Medikamenten. 
-
  
 === Nichtfunktionale Anforderungen
-
 
 *Fehlerrate:* Die Fehlerrate sollte sowohl bei der Spracherkennung, als auch bei der Aktivierung (WakeWord/Intervall), möglichst gering sein.
 
