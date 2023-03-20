@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konfiguration</title>
+</head>
+    
+<body>
+    <div>
+        <header class="page-header">
+            <h1>Konfigurationen</h1>
+        </header>
+
+
+        <label>Geschlecht des Sprachassistenten</label>
+        <select name="gender" id="gender">
+            <option value=""></option>
+            <option value="maennlich">männlich</option>
+            <option value="weiblich">weiblich</option>
+        </select><br><br>
+
+        <label>Tonlage</label>
+        <select name="pitch" id="pitch">
+            <option value=""></option>
+            <option value="tief">tief</option>
+            <option value="normal">normal</option>
+            <option value="hoch">hoch</option>
+        </select><br><br>
+
+        <label>Klang</label>
+        <select name="tone" id="tone">
+            <option value=""></option>
+            <option value="natuerlich">natürlich</option>
+            <option value="synthetisch">synthetisch</option>
+        </select><br><br>
+
+        <label>Lautstärke</label>
+        <select name="volume" id="volume">
+            <option value=""></option>
+            <option value="1">1 (leise)</option>
+            <option value="2">2</option>
+            <option value="3">3 (mittel)</option>
+            <option value="4">4</option>
+            <option value="5">5 (laut)</option>
+        </select><br><br>
+
+        <label>Sprache</label>
+        <select name="language" id="language">
+            <option value=""></option>
+            <option value="Deutsch">Deutsch</option>
+            <option value="Englisch">Englisch</option>
+        </select><br><br>
+
+        <label>Gesprächsorientierung</label>
+        <select name="topics" id="topics">
+            <option value=""></option>
+            <option value="Aufgaben orientiert">Aufgaben orientiert</option>
+            <option value="Sozial orientiert">Sozial orientiert</option>
+        </select><br><br>
+
+        <label>Anrede</label>
+        <select name="form_of_address" id="form_of_address">
+            <option value=""></option>
+            <option value="Sie">Siezen</option>
+            <option value="Du">Duzen</option>
+        </select><br><br>
+
+        <label>Satzpause</label>
+        <select name="pause" id="pause">
+            <option value=""></option>
+            <option value="keine">keine</option>
+            <option value="kurz">kurz</option>
+            <option value="lang">lang</option>
+        </select><br><br>
+
+        <label>Sprechgeschwindigkeit</label>
+        <select name="speed" id="speed">
+            <option value=""></option>
+            <option value="langsam">langsam</option>
+            <option value="durchschnittlich">durchschnittlich</option>
+        </select><br><br>
+
+        <label>Satzlänge</label>
+        <select name="length" id="length">
+            <option value=""></option>
+            <option value="normal">normal</option>
+            <option value="vereinfacht">vereinfacht</option>
+        </select><br><br>
+
+        <label>vereinfachter Ausdruck</label>
+        <select name="expression" id="expression">
+            <option value=""></option>
+            <option value="ja">ja</option>
+            <option value="nein">nein</option>
+        </select><br><br>
+
+        <label>Alternative Keywords</label>
+        <input type="text" id="alternate_keywords" placeholder="mehrere Keywords mit ',' trennen" required=""/><br><br>
+
+        <input type="submit" value="Submit" onclick="submit()"><br><br>
+
+    </div> 
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+    function submit() {
+        var gender = document.getElementById("gender").value
+        var pitch = document.getElementById("pitch").value
+        var tone = document.getElementById("tone").value
+        var volume = document.getElementById("volume").value
+        var language = document.getElementById("language").value
+        var topics = document.getElementById("topics").value
+        var form_of_address = document.getElementById("form_of_address").value
+        var pause = document.getElementById("pause").value
+        var speed = document.getElementById("speed").value
+        var length = document.getElementById("length").value
+        var expression = document.getElementById("expression").value
+        var alternate_keywords = document.getElementById("alternate_keywords").value
+
+        if (gender == "" ) {
+            document.getElementById("button").style.display = "block";
+            document.getElementById("button").style.backgroundColor = "darkred";
+            document.getElementById("demo").innerHTML = "Option should not be empty!";
+        }else if(pitch == ""){
+            document.getElementById("button").style.display = "block";
+            document.getElementById("button").style.backgroundColor = "darkred";
+            document.getElementById("demo").innerHTML = "Option should not be empty!";
+        }else if(tone == ""){
+            document.getElementById("button").style.display = "block";
+            document.getElementById("button").style.backgroundColor = "darkred";
+            document.getElementById("demo").innerHTML = "Option should not be empty!";
+        }else if(volume == ""){
+            document.getElementById("button").style.display = "block";
+            document.getElementById("button").style.backgroundColor = "darkred";
+            document.getElementById("demo").innerHTML = "Option should not be empty!";
+        }else if(language == ""){
+            document.getElementById("button").style.display = "block";
+            document.getElementById("button").style.backgroundColor = "darkred";
+            document.getElementById("demo").innerHTML = "Option should not be empty!";
+        }else if(topics == ""){
+            document.getElementById("button").style.display = "block";
+            document.getElementById("button").style.backgroundColor = "darkred";
+            document.getElementById("demo").innerHTML = "Option should not be empty!";
+        }else if(form_of_address == ""){
+            document.getElementById("button").style.display = "block";
+            document.getElementById("button").style.backgroundColor = "darkred";
+            document.getElementById("demo").innerHTML = "Option should not be empty!";
+        }else if(pause == ""){
+            document.getElementById("button").style.display = "block";
+            document.getElementById("button").style.backgroundColor = "darkred";
+            document.getElementById("demo").innerHTML = "Option should not be empty!";
+        }else if(speed == ""){
+            document.getElementById("button").style.display = "block";
+            document.getElementById("button").style.backgroundColor = "darkred";
+            document.getElementById("demo").innerHTML = "Option should not be empty!";
+        }else if(length == ""){
+            document.getElementById("button").style.display = "block";
+            document.getElementById("button").style.backgroundColor = "darkred";
+            document.getElementById("demo").innerHTML = "Option should not be empty!";
+        }else if(expression == ""){
+            document.getElementById("button").style.display = "block";
+            document.getElementById("button").style.backgroundColor = "darkred";
+            document.getElementById("demo").innerHTML = "Option should not be empty!";
+        }else{
+
+            var pathArray = window.location.pathname.split("/");
+            var pathId = pathArray[2];
+
+            var user = {
+                'userId': pathId,
+                'gender': gender,
+                'pitch': pitch,
+                'tone': tone,
+                'volume': volume,
+                'language': language,
+                'topics': topics,
+                'form_of_address': form_of_address,
+                'pause': pause,
+                'speed' : speed,
+                'length' : length,
+                'expression': expression,
+                'alternate_keywords' : alternate_keywords
+            }
+            
+            $.ajax({
+                type: "POST",
+                url: "/save_config",
+                contentType: "application/json",
+                data: JSON.stringify(user),
+                dataType: "json",
+            }).done(function(result){
+                console.log(result);
+                document.getElementById("button").style.display = "block";
+                document.getElementById("button").style.backgroundColor = "forestgreen";
+                document.getElementById("demo").innerHTML = "Successfully submitted new configuration on ID: " + result.userId;
+            });
+        }
+    }
+    </script>
+</body>
+
+</html>
+

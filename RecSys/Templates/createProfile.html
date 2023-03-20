@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+</head>
+    
+<body>
+    <div>
+        <header>
+            <h1>Erstelle neues Profil</h1>
+        </header>
+
+        <label>Name</label>
+        <input type="text" id="userName" placeholder="Name" required=""/><br><br>
+        
+        <label>Alter</label>
+        <input type="number" id="age" min="0"/><br><br>
+
+        <label>Geschlecht</label>
+        <select name="gender_p" id="gender_p">
+            <option value=""></option>
+            <option value="maennlich">männlich</option>
+            <option value="weiblich">weiblich</option>
+            <option value="divers">divers</option>
+        </select><br><br>
+
+        <label>Sprache</label>
+        <select name="language_p" id="language_p">
+            <option value=""></option>
+            <option value="Deutsch">Deutsch</option>
+            <option value="Englisch">Englisch</option>
+        </select><br><br>
+
+        <label>Hoergerät</label>
+        <select name="hearing_aid" id="hearing_aid">
+            <option value=""></option>
+            <option value="ja">ja</option>
+            <option value="nein">nein</option>
+        </select><br><br>
+
+        <label>Vorkentnisse</label>
+        <select name="prior_knowledge" id="prior_knowledge">
+            <option value=""></option>
+            <option value="ja">ja</option>
+            <option value="nein">nein</option>
+        </select><br><br>
+
+        <label>Alternative Keywords</label>
+        <input type="text" id="alternate_keywords" placeholder="mehrere Keywords mit ',' trennen" required=""/><br><br>
+        
+        <div class="submit">
+            <input type="submit" value="Submit" onclick="submit()"><br><br>
+        </div>
+        
+        <button id="button" hidden><p id="demo"></p></button>
+
+    </div> 
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+    function submit() {
+        var userName = document.getElementById("userName").value
+        var age = document.getElementById("age").value
+        var gender_p = document.getElementById("gender_p").value
+        var language_p = document.getElementById("language_p").value
+        var hearing_aid = document.getElementById("hearing_aid").value
+        var prior_knowledge = document.getElementById("prior_knowledge").value
+        var alternate_keywords = document.getElementById("alternate_keywords").value
+
+        if (userName == "" ) {
+            document.getElementById("button").style.display = "block";
+            document.getElementById("button").style.backgroundColor = "darkred";
+            document.getElementById("demo").innerHTML = "Option should not be empty!";
+        }else if(age == ""){
+            document.getElementById("button").style.display = "block";
+            document.getElementById("button").style.backgroundColor = "darkred";
+            document.getElementById("demo").innerHTML = "Option should not be empty!";
+        }else if(gender_p == ""){
+            document.getElementById("button").style.display = "block";
+            document.getElementById("button").style.backgroundColor = "darkred";
+            document.getElementById("demo").innerHTML = "Option should not be empty!";
+        }else if(language_p == ""){
+            document.getElementById("button").style.display = "block";
+            document.getElementById("button").style.backgroundColor = "darkred";
+            document.getElementById("demo").innerHTML = "Option should not be empty!";
+        }else if(hearing_aid == ""){
+            document.getElementById("button").style.display = "block";
+            document.getElementById("button").style.backgroundColor = "darkred";
+            document.getElementById("demo").innerHTML = "Option should not be empty!";
+        }else if(prior_knowledge == ""){
+            document.getElementById("button").style.display = "block";
+            document.getElementById("button").style.backgroundColor = "darkred";
+            document.getElementById("demo").innerHTML = "Option should not be empty!";
+        }else{
+            var user = {
+                'userId': '',
+                'userName': userName,
+                'age': age,
+                'language_p': language_p,
+                'hearing_aid': hearing_aid,
+                'prior_knowledge': prior_knowledge,
+                'alternate_keywords' : alternate_keywords
+            }
+            
+            $.ajax({
+                type: "POST",
+                url: "/get_new_user",
+                contentType: "application/json",
+                data: JSON.stringify(user),
+                dataType: "json",
+            }).done(function(result){
+                console.log(result);
+                document.getElementById("button").style.display = "block";
+                document.getElementById("button").style.backgroundColor = "forestgreen";
+                document.getElementById("demo").innerHTML = "Successfully submitted '" + result.userName + "' on ID: " + result.userId;
+            });
+        }
+    }
+    </script>
+</body>
+
+</html>
