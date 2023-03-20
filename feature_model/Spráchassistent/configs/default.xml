@@ -9,7 +9,7 @@
 	<feature automatic="unselected" name="tief"/>
 	<feature manual="selected" name="mittel"/>
 	<feature automatic="unselected" name="hoch"/>
-	<feature automatic="selected" name="Art"/>
+	<feature automatic="selected" name="Klang"/>
 	<feature automatic="unselected" name="natürlich"/>
 	<feature manual="selected" name="synthetisch"/>
 	<feature automatic="selected" name="Lautstärke"/>
