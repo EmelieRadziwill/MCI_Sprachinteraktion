@@ -2,7 +2,7 @@
 <featureModel>
 	<properties>
 		<graphics key="autolayoutconstraints" value="false"/>
-		<graphics key="legendposition" value="102,10"/>
+		<graphics key="legendposition" value="65,39"/>
 		<graphics key="legendautolayout" value="false"/>
 		<graphics key="showconstraints" value="true"/>
 		<graphics key="showshortnames" value="false"/>
@@ -13,129 +13,130 @@
 	</properties>
 	<struct>
 		<and abstract="true" mandatory="true" name="Sprachassistent">
-			<graphics key="position" value="770,31"/>
+			<graphics key="position" value="893,33"/>
 			<graphics key="collapsed" value="false"/>
 			<and mandatory="true" name="Stimme">
-				<graphics key="position" value="413,113"/>
+				<graphics key="position" value="496,107"/>
 				<graphics key="collapsed" value="false"/>
 				<alt mandatory="true" name="Geschlecht">
-					<graphics key="position" value="114,233"/>
+					<graphics key="position" value="197,227"/>
 					<feature name="weiblich">
-						<graphics key="position" value="87,283"/>
+						<graphics key="position" value="170,277"/>
 					</feature>
 					<feature name="männlich">
-						<graphics key="position" value="159,283"/>
+						<graphics key="position" value="242,277"/>
 					</feature>
 				</alt>
 				<alt mandatory="true" name="Tonlage">
-					<graphics key="position" value="305,237"/>
+					<graphics key="position" value="388,231"/>
 					<feature name="tief">
-						<graphics key="position" value="263,286"/>
+						<graphics key="position" value="346,280"/>
 					</feature>
 					<feature name="mittel">
-						<graphics key="position" value="303,287"/>
+						<graphics key="position" value="386,281"/>
 					</feature>
 					<feature name="hoch">
-						<graphics key="position" value="358,287"/>
+						<graphics key="position" value="441,281"/>
 					</feature>
 				</alt>
-				<alt mandatory="true" name="Art">
-					<graphics key="position" value="489,237"/>
+				<alt mandatory="true" name="Klang">
+					<graphics key="position" value="572,231"/>
+					<graphics key="collapsed" value="false"/>
 					<feature name="natürlich">
-						<graphics key="position" value="421,287"/>
+						<graphics key="position" value="504,281"/>
 					</feature>
 					<feature name="synthetisch">
-						<graphics key="position" value="498,287"/>
+						<graphics key="position" value="581,281"/>
 					</feature>
 				</alt>
 				<alt mandatory="true" name="Lautstärke">
-					<graphics key="position" value="662,237"/>
+					<graphics key="position" value="745,231"/>
 					<feature name="1 - leise">
-						<graphics key="position" value="602,287"/>
+						<graphics key="position" value="685,281"/>
 					</feature>
 					<feature name="2">
-						<graphics key="position" value="673,287"/>
+						<graphics key="position" value="756,281"/>
 					</feature>
 					<feature name="3">
-						<graphics key="position" value="699,287"/>
+						<graphics key="position" value="782,281"/>
 					</feature>
 					<feature name="4">
-						<graphics key="position" value="725,287"/>
+						<graphics key="position" value="808,281"/>
 					</feature>
 					<feature name="5 - laut">
-						<graphics key="position" value="751,287"/>
+						<graphics key="position" value="834,281"/>
 					</feature>
 				</alt>
 			</and>
 			<and mandatory="true" name="Spracheigenschaften">
-				<graphics key="position" value="750,354"/>
+				<graphics key="position" value="875,332"/>
 				<alt mandatory="true" name="Pause zwischen den Sätzen">
-					<graphics key="position" value="490,405"/>
+					<graphics key="position" value="616,452"/>
 					<feature name="keine">
-						<graphics key="position" value="514,460"/>
+						<graphics key="position" value="640,507"/>
 					</feature>
 					<feature name="kurz">
-						<graphics key="position" value="573,459"/>
+						<graphics key="position" value="699,507"/>
 					</feature>
 					<feature name="lang">
-						<graphics key="position" value="627,459"/>
+						<graphics key="position" value="750,506"/>
 					</feature>
 				</alt>
 				<alt mandatory="true" name="Sprechgeschwindigkeit">
-					<graphics key="position" value="741,404"/>
+					<graphics key="position" value="867,450"/>
 					<feature name="langsam">
-						<graphics key="position" value="730,456"/>
+						<graphics key="position" value="856,503"/>
 					</feature>
 					<feature name="durchschnittlich">
-						<graphics key="position" value="814,456"/>
+						<graphics key="position" value="938,503"/>
 					</feature>
 				</alt>
 				<alt mandatory="true" name="Satzlänge">
-					<graphics key="position" value="981,404"/>
+					<graphics key="position" value="1116,450"/>
 					<graphics key="collapsed" value="false"/>
 					<feature name="normal">
-						<graphics key="position" value="962,454"/>
+						<graphics key="position" value="1085,503"/>
 					</feature>
 					<feature name="vereinfacht">
-						<graphics key="position" value="1030,454"/>
+						<graphics key="position" value="1156,504"/>
 					</feature>
 				</alt>
 				<feature name="vereinfachter Ausdruck">
-					<graphics key="position" value="1099,404"/>
+					<graphics key="position" value="1224,453"/>
 				</feature>
 			</and>
 			<and mandatory="true" name="Kommunikationsstil">
-				<graphics key="position" value="1181,106"/>
+				<graphics key="position" value="1358,97"/>
 				<alt mandatory="true" name="Sprache">
-					<graphics key="position" value="891,238"/>
+					<graphics key="position" value="1068,229"/>
 					<graphics key="collapsed" value="false"/>
 					<feature name="Deutsch">
-						<graphics key="position" value="853,288"/>
+						<graphics key="position" value="1030,279"/>
 					</feature>
 					<feature name="Englisch">
-						<graphics key="position" value="930,288"/>
+						<graphics key="position" value="1107,279"/>
 					</feature>
 				</alt>
 				<alt mandatory="true" name="Gesprächsorientierung">
-					<graphics key="position" value="1076,238"/>
+					<graphics key="position" value="1253,229"/>
 					<feature name="Aufgaben orientiert">
-						<graphics key="position" value="1019,288"/>
+						<graphics key="position" value="1196,279"/>
 					</feature>
 					<feature name="Soziel orientiert">
-						<graphics key="position" value="1174,288"/>
+						<graphics key="position" value="1351,279"/>
 					</feature>
 				</alt>
 				<alt mandatory="true" name="Anrede">
-					<graphics key="position" value="1349,243"/>
+					<graphics key="position" value="1526,234"/>
 					<feature name="Siezen">
-						<graphics key="position" value="1314,288"/>
+						<graphics key="position" value="1491,279"/>
 					</feature>
 					<feature name="Duzen">
-						<graphics key="position" value="1383,289"/>
+						<graphics key="position" value="1560,280"/>
 					</feature>
 				</alt>
 				<feature name="alternative Keywords">
-					<graphics key="position" value="1457,245"/>
+					<graphics key="position" value="1634,236"/>
 				</feature>
 			</and>
 		</and>
