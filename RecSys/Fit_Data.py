@@ -14,8 +14,7 @@ configs_created = pd.read_csv(configfile_created, sep=";")
 # user profiles
 user_id = list(profiles["userId"])
 name = list(profiles["Name"])
-age = list(profiles["Alter"])
-alternate_keyword = list(profiles["alternative Keywords"])
+
 user_mappings = []
 config_mappings = []
 
@@ -24,6 +23,8 @@ le = preprocessing.LabelEncoder()
 
 
 def fit_data():
+    age = le.fit_transform(list(profiles["Alter"]))
+    le_age_mapping = dict(zip(le.classes_, le.transform(le.classes_)))
     gender_p = le.fit_transform(list(profiles["Geschlecht"]))
     le_gender_mapping = dict(zip(le.classes_, le.transform(le.classes_)))
     language_p = le.fit_transform(list(profiles["Sprache"]))
@@ -34,13 +35,14 @@ def fit_data():
     le_prior_knowledge_mapping = dict(zip(le.classes_, le.transform(le.classes_)))
 
     global user_mappings
-    user_mappings = [user_id, name, age, le_gender_mapping, le_language_p_mapping, le_hearing_aid_mapping, le_prior_knowledge_mapping, alternate_keyword]
+    user_mappings = [user_id, name, le_age_mapping, le_gender_mapping, le_language_p_mapping, le_hearing_aid_mapping, le_prior_knowledge_mapping]
 
-    X = list(zip(gender_p, language_p, hearing_aid, prior_knowledge))
+    X = list(zip(age, gender_p, language_p, hearing_aid, prior_knowledge))
 
     # user configs
+
     UserID = list(configs["userId"])
-    alternate_keyword_conf = list(configs["alternative Keywords"])
+    alternate_keywords = list(configs["alternative Keywords"])
     gender = le.fit_transform(list(configs["Geschlecht"]))
     conf_gender_mapping = dict(zip(le.classes_, le.transform(le.classes_)))
     pitch = le.fit_transform(list(configs["Tonlage"]))
@@ -66,7 +68,7 @@ def fit_data():
 
     global config_mappings
     config_mappings = [conf_gender_mapping, conf_pitch_mapping, conf_tone_mapping, conf_volume_mapping, conf_language_mapping, conf_topics_mapping,
-                        conf_form_of_address_mapping, alternate_keyword_conf, conf_pause_mapping, conf_speed_mapping, conf_length_mapping, conf_expression_mapping]
+                        conf_form_of_address_mapping, conf_pause_mapping, conf_speed_mapping, conf_length_mapping, conf_expression_mapping, alternate_keywords]
 
     
     y = list(zip(gender, pitch, tone, volume, language, topics, form_of_address, pause, speed, length, expression))
@@ -75,7 +77,8 @@ def fit_data():
 
 
 def translate_userMapping(data):  # string to int
-    for x in range(3, 6):
+    print(data)
+    for x in range(2, 7):
         data[x] = user_mappings[x].get(data[x])
     return data
 

@@ -12,11 +12,14 @@
 
 
         <label>Geschlecht des Sprachassistenten</label>
-        <select name="gender" id="gender">
+        <select name="gender" id="gender" value="{{c[1]}}">
             <option value=""></option>
             <option value="maennlich">männlich</option>
             <option value="weiblich">weiblich</option>
-        </select><br><br>
+        </select>
+        <p>
+            {{r[0]}}
+        </p><br><br>
 
         <label>Tonlage</label>
         <select name="pitch" id="pitch">
@@ -196,6 +199,11 @@
         }
     }
     </script>
+
+    <script> 
+        console.log({{r}})
+    </script>
+
 </body>
 
 </html>

@@ -28,10 +28,14 @@ def trainModel(X, y):
     x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(X, y, test_size=test_size)  # choose testsize
     x_train = list(x_train)
     y_train = list(y_train)
+
+    '''
     for obj in range(len(x_train)):
         x_train[obj] = x_train[obj][2:]
         y_train[obj] = y_train[obj][2:]
+    '''
     model.fit(x_train, y_train)
+
     return x_test, y_test
 
 
@@ -73,16 +77,18 @@ def testModel(x_test, y_test, min_score):
 
 def predictConfig(data):
     data = Fitting.translate_userMapping(data)
-    predict = model.predict([data[5:]])
+    predict = model.predict([data[2:]])
     final_predict = list(predict[0])
-    final_predict.insert(0, data[3])
-    final_predict.insert(1, data[4])
-    print("\033[94m###", data[1], "U_ID:", data[0], "###\033[0m")
-    print("Vorgeschlagene Konfiguration:\n", final_predict)
-    if config_translate:
-        print(str(Fitting.retranslate_configMapping(list(final_predict))) + "\n")
+    #final_predict.insert(0, data[3])
+    #final_predict.insert(1, data[4])
+    #print("\033[94m###", data[1], "U_ID:", data[0], "###\033[0m")
+    #print("Vorgeschlagene Konfiguration:\n", final_predict)
+    #if config_translate:
+        #print(str(Fitting.retranslate_configMapping(list(final_predict))) + "\n")
 
-    return predict[0], final_predict
+    return final_predict
+
+    #return predict[0], final_predict
 
 
 def config_rating(user, config, bool):

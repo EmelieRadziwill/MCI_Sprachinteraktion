@@ -1,6 +1,7 @@
 import sys
 import pandas as pd
 import Fit_Data as Fitting
+import KNN
 from flask import Flask, jsonify, request, redirect, render_template, url_for
 import json
 
@@ -20,13 +21,10 @@ def getUser(ids):
         example_user.append(get_csvuser(i))
     return example_user, example_config
 
-def getNewUser(ids):
-    example_config = []
-    example_user = []
-    for i in ids:
-        example_config.append(get_csvconfig_created(i))
-        example_user.append(get_csvuser_created(i))
-    return example_user, example_config    
+def getNewUser(id):
+    config = get_csvconfig_created(id)
+    user = get_csvuser_created(id)
+    return user, config    
 
 
 def Server():
@@ -63,9 +61,15 @@ def Server():
 
     @app.route('/MCI/<int:uid>/', methods=['GET', 'POST'])
     def change_config(uid):
+
+        userdata, configdata = getNewUser(uid)
+        recdata = KNN.predictConfig(userdata)
+        recdata = Fitting.retranslate_configMapping(list(recdata))
+        
         if request.method == 'POST':
             return redirect(url_for('index'))
-        return render_template('config.html')
+        return render_template('config.html', c=configdata , r=recdata)
+    
     
     @app.route('/save_config/', methods=['POST'])
     def save_config():
@@ -79,6 +83,7 @@ def Server():
         if request.method == 'POST':
             return redirect(url_for('index'))
         return render_template('createProfile.html')
+    
 
     @app.route('/get_new_user/', methods=['POST'])
     def get_new_user():
@@ -98,7 +103,7 @@ def Server():
 def storeUser(data):
     userId = 601 + pd.read_csv(Fitting.userfile_created, sep=";")["userId"].size
     with open(profiles, 'a') as csv:
-        csv.write("\n" + str(userId) + ";" + data['userName'] + ";" + data['age'] + ";" + data['language_p'] + ";" + data['hearing_aid'] + ";" + data['prior_knowledge'] + ";" + data['alternate_keywords'])
+        csv.write("\n" + str(userId) + ";" + data['userName'] + ";" + data['age'] + ";" + data['language_p'] + ";" + data['hearing_aid'] + ";" + data['prior_knowledge'])
     return userId
 
 
@@ -125,7 +130,7 @@ def get_csvuser(uid):
             break
     if flag:
         data = Fitting.profiles.iloc[i - 1]
-        data = list([data[0], data[1], data[2], data[4], data[5], data[3], data[6], data[7], data[8]])
+        data = list([data[0], data[1], data[2], data[3], data[4], data[5], data[6]])
     else:
         data = None
     return data
@@ -133,7 +138,7 @@ def get_csvuser(uid):
 def get_csvuser_created(uid):
     i = 0
     flag = False
-    profiles_created = pd.read_csv(profiles)
+    profiles_created = pd.read_csv(profiles, sep=';')
     for x in profiles_created["userId"]:
         i = i + 1
         if x == uid:
@@ -141,7 +146,7 @@ def get_csvuser_created(uid):
             break
     if flag:
         data = profiles_created.iloc[i - 1]
-        data = list([data[0], data[1], data[2], data[4], data[5], data[3], data[6], data[7], data[8]])
+        data = list([data[0], data[1], data[2], data[3], data[4], data[5], data[6]])
     else:
         data = None
     return data    
@@ -157,7 +162,7 @@ def get_csvconfig(uid):
             break
     if flag:
         data = Fitting.configs.iloc[i - 1]
-        data = list([data[9], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[10], data[11], data[12], data[13], data[14], data[15]])
+        data = list([data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[11], data[12]])
     else:
         data = None
     return data
@@ -165,7 +170,7 @@ def get_csvconfig(uid):
 def get_csvconfig_created(uid):
     i = 0
     flag = False
-    configs_created = pd.read_csv(configfile_created)
+    configs_created = pd.read_csv(configfile_created, sep=';')
     for x in configs_created["userId"]:
         i = i + 1
         if x == uid:
@@ -173,7 +178,7 @@ def get_csvconfig_created(uid):
             break
     if flag:
         data = configs_created.iloc[i - 1]
-        data = list([data[9], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[10], data[11], data[12], data[13], data[14], data[15]])
+        data = list([data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[11], data[12]])
     else:
         data = None
     return data    
@@ -235,4 +240,3 @@ def store_config(data):
     csv.loc[csv["userId"] == id, "alternative Keywords"] = data["alternate_keywords"]
 
     csv.to_csv(configfile_created, index=False, sep=';')
-            
