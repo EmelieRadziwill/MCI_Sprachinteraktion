@@ -8,18 +8,43 @@
 toc::[]
 :numbered:
 
-// Anmerkung:
-// Das Dokument befindet sich noch in Arbeit und dient zunächst primär der Informationssammlung
+== Aufgabenstellung
+Das Projektziel ist die Entwicklung eines für die Zielgruppe älterer Menschen anwendbaren Adaptionskonzepts für Sprachinteraktion basierend auf der Konfiguration von Feature-Modellen und der Konfigurationsauswahl durch ein Recommender-System, mit folgenden Teilzielen:
 
-== Aufgabenstellung und Zielsetzung
-Die Entwicklung eines für die Zielgruppe älterer Menschen
-anwendbaren Adaptionskonzepts für Sprachinteraktion basierend auf der Konfiguration von Feature-Modellen und der Konfigurationsauswahl durch ein Recommender-System.
+*Vertraut machen mit den bestehenden Projektergebnissen:* Die Ergebnisse dieses KP sollen Sprachinteraktion adaptierbar machen, sodass die Architektur eines Sprachassistenten benötigt wird. Hierfür darf das KP zur Mycroft-Implementierung (wurde bereitgestellt) verwendet werden oder aber auf Amazons Alexa (ggf. im Zusammenspiel mit RASA) zurückgegriffen werden. Gleichzeitig soll die Adaptierbarkeit durch eine Konfiguration von Feature-Modellen ermöglicht werden, welches durch ein Recommender-System ausgewählt wird.
+Hierfür soll auf die Ergebnisse des KPs zum Deep-Learning-Ansatz (ebenfalls bereitgestellt) zurückgegriffen werden.
 
-== Forschungsteil (Arbeitstitel)
-siehe Forschungsteil.adoc
+*Entwicklung eines Feature-Modells zur Abbildung von Sprachvarianten für einen Skill:* Mit dem Wissen über das benötigte Input-Feature-Modell sollte sich ein Feature-Modell entwerfen lassen, mit dem variable Sprachinteraktion dargestellt werden kann, die sich zur automatisierten Konfiguration eignet. Die Entwicklung des Feature-Modells muss auf geeignete wissenschaftliche Weise erfolgen, also hauptsächlich basierend auf wissenschaftlicher Literaturarbeit. Dieser Teil ist in der Projektdokumentation nachvollziehbar darzustellen. Im Ergebnis können zwei Modelle entstehen: Einerseits ein sog. Nutzermodell zur Beschreibung von Nutzenden und andererseits ein Variabilitätsmodell zur Beschreibung der Sprachinteraktion.
 
-== Analyse der Anforderungen 
-=== Funktionale Anforderungen
+*Entwicklung geeigneter Trainingsdaten:* Zur Lösung des sog. Kaltstartproblems werden initiale Trainingsdaten für das Recommender-System benötigt. Hierfür gibt es unterschiedliche zulässige Vorgehensweisen. Ideal ist ein solches Vorgehen, bei dem im Ergebnis möglichst viele plausible Daten gesammelt werden. Beispielsweise lassen sich geeignete Personas recherchieren oder selbst erstellen, aus deren Perspektive jeweils mehrere geeignete Konfigurationen entworfen werden. Die Personas selbst lassen sich mittels des Nutzermodells beschreiben (sog. Nutzerprofil).
+
+*Exemplarische Anwendung der Daten mittels des Recommenders sowie eines Sprachassistenten:* Die bestehenden KP-Projekte dienen als Grundlage, das entworfene Modell und die vorbereiteten Trainingsdaten auszutesten und zu demonstrieren. Hierfür muss ein sog. Skill für den Sprachassistenten entwickelt werden, der in der Interaktion mit dem Nutzenden auf eine vorgeschlagene Konfiguration zurückgreifen wird. Damit ein Vorschlag passend für den Nutzenden unterbreitet werden kann, muss das System die Berücksichtigung von Nutzerprofilen unterstützen.
+
+== Motivation und Ziel
+// aus Forschungsteil übernehmen
+
+== Aufbau
+Das Adaptionskonzept soll eine Zuordnung von Nutzerprofilen zu Systemkonfigurationen ermöglichen. Zu Beginn erfolgte eine Zielgruppenanalyse, worauf basierende Personas und Anforderungen an Sprachinteraktion extrahiert wurden. Aufgrund dieser Informationen wurde ein Feature Modell erstellt und die Attribute des Profils ausgearbeitet, welche mittels eines Recommender-Systems zugeordnet werden sollen. Dies basiert auf einem KNN-Algorithmus, welcher mit Trainingsdaten angelernt werden sollte. Dafür wurden Testdaten anhand der Nutzeranalyse konzipiert, welche aus Zuordnungen von Profil und Konfiguration bestehen.
+
+Nach einer initialen Konfiguration des Nutzers über Angaben wie Alter, Geschlecht, Sprache, Einschränkungen und Präferenzen gibt das Recommender-System einen zum Nutzer angepassten Vorschlag über die Einstellungen des Systems aus. Diese Einstellungen können verworfen oder im Nachhinein angepasst werden. Zur Veranschaulichung wurde ein Sprachassistent entworfen. Dieser zeigt in Form eines Wettersklills den angepassten Kommunikationsstil je nach Konfiguration.
+
+
+== Spezifikation der Zielgruppe
+// aus Forschungsteil übernehmen
+
+== Features des Sprachassistenten
+// aus Forschungsteil übernehmen
+
+== Trainingsdaten
+// aus Forschungsteil übernehmen
+
+== Recommender System
+// Eric, Mac
+
+== Sprachassistenten
+// Eric, Max
+=== Analyse der Anforderungen 
+==== Funktionale Anforderungen
 
 *Spracherkennung:* Die Aufgabe der Spracherkennung (Speech to Text) ist es Audiosignale in Text umzuwandeln. Dadurch können Befehle/Skills akustisch aufgerufen werden. 
 
@@ -31,7 +56,7 @@ siehe Forschungsteil.adoc
 
 *Variabilitätsmodell:* Das Variabilitätsmodell gibt vor welche Einstellungen zusammen oder ausschließend valide sind. Dabei bezieht es sich auf unser Featuremodell und nimmt Eingaben vom Benutzer oder dem Recommendersystem.
  
-=== Nichtfunktionale Anforderungen
+==== Nichtfunktionale Anforderungen
 
 *Fehlerrate:* Die Fehlerrate sollte sowohl bei der Spracherkennung, als auch bei der Aktivierung (WakeWord/Intervall), möglichst gering sein.
 
@@ -41,23 +66,61 @@ siehe Forschungsteil.adoc
 
 *Qualität der Sprachausgabe:* Das Ziel der Sprachausgabe ist möglichst nah an ein menschliches Sprachbild ranzukommen und nicht wie ein Computer zu klingen.
 
-== Konzept
-
-Ziel ist es einen variablen Sprachassistenten für Senioren zu entwickeln, der über verschiedene Funktionen und Konfigurationen verfügt um die Bedienung einfacher für die individuellen Bedürfnisse des Nutzer zu gestalten.
-
-=== Aufbau
-
-Nach einer Initialkonfiguration des Nutzers über Angaben wie Alter, Geschlecht, Bedürfnisse, Erkrankungen und Präferenzen soll das Recommendersystem anhand von vortrainierten Datensätzen valider Konfiguration einen zum Nutzer angepassten Vorschlag über die Einstellungen des Systems ausgeben. Diese Einstellungen können natürlich verworfen oder im Nachhinein individuell noch angepasst werden. (Funktionsweise basierend auf dem Recommender System vom vorherigen Semester, genaure Erklärung folgt, wenn dieses auf unsere Bedürfnisse angepasst wurde)
-
-Der eigentliche Sprachassistent unterscheidet sich grundlegend nicht viel von herkömmlichen Sprachassistenten. Zur Interaktion mit dem Assistenten kann man ihn entweder mit einem Wort oder einer Phrase "aufwecken" oder er bleibt permanent eingeschaltet. Alternativ ist es auch möglich, dass eine Konversation mit dem Benutzer angefangen wird. Nachdem die Spracherkennung aktiviert wurde kann man Anfragen stellen, die dann in Textform übersetzt und an das Programm weitergeleitet werden. Daraufhin wird dann erkannt um welche Abfrage es sich handelt und anhand der vom Nutzer festgelegten Präferenzen wird dann eine individuell angepasste Antwort formuliert. Diese wird im Nachhinein in der Sprachsynthese erneut mit gewünschten Präferenzen angepasst ausgegeben. Die Spracherkennung sowohl als auch die -ausgabe erfolgen mit Alexa.
-
 === Frameworks
-
 Recommender System Praktika letztes Semester
 
 === Komponenten
-
 Alexa
 
-== Produktaufbau/ -verwendung (Arbeitstitel)
-== Projektorganisation (Arbeitstitel)
+== Produktaufbau/ -verwendung
+// Eric, Max
+
+== Projektorganisation 
+[%header, cols="1, 1, 1"]
+|===
+|Sprint
+|Deadline
+|Beschreibung
+
+|1
+|10.11.2022
+a| * Analyse der Zielgruppe
+   * Einarbeitung in früherer Arbeiten
+
+|2
+|15.12.2022
+a| * Feature Modell anfangen
+   * Anforderungsanalyse Recommender-System
+
+|3
+|05.01.2023
+a| * Personas erstellen
+   * Feature-Modell fertig stellen
+   * Beginn Recomender-System
+
+|4
+|09.02.2023
+a| * Recommender-System fertig stellen
+   * Testdaten erstellen
+
+|5
+|09.03.2023
+a| * Sprachassistenten anfangen
+   * Dokumentation ausarbeiten
+
+|6
+|23.03.2023
+a| * Sprachassistenten fertig stellen
+   * Dokumentation finalisieren
+
+|===
+
+== Zusammenfassung und Ausblick
+Die Nutzung moderner Technologien bietet sowohl Herausforderungen als auch Möglichkeiten, um den Alltag älterer Menschen zu bereichern. Die vielfältigen und variablen Anforderungen der Senioren erfordern die Möglichkeit das System an ihre Bedürfnisse anzupassen.
+Im Rahmen dieser Arbeit wurde dazu ein Adaptionskonzept entwickelt, welches die initiale Konfiguration eines Sprachassistenten anhand eines Nutzerprofils vornimmt. Durch umfassende Recherche wurde eine Nutzeranalyse vollzogen, anhand derer Anforderungen an einen Sprachassistenten abgeleitet werden konnten. Diese fokussierten sich besonders auf den Ausgleich der häufig schwindenden auditiven Wahrnehmung sowie dem Rückgang kognitiver Funktionen.  Das entstandene Feature-Modell gruppiert die verschiedenen Merkmale in Teilbäume für Stimme, Spracheigenschaften und Kommunikationsstil. Zusätzlich dazu wurde ein Nutzerprofil erstellt, welches zuordnungsrelevante Charakteristika des Nutzers erfasst.
+Die Zuordnung von Profilen zu Konfigurationen erfolgt mittels eines Recommender-Systems, basierend auf dem KNN-Algorithmus. Um diesen Anzulernen wurden Testdaten erstellt, welche die Ergebnisse der Nutzeranalyse aufgegriffen, um konkrete Zuordnungen zwischen Charakteristika (beispielsweise ein verringertes Hörvermögen) und Feature (der Tonlage) einzubeziehen. Da nicht für jede Teilkonfiguration eine konkrete Zuordnung zu einer Anforderung belegt werden konnte, wurde eine Default Konfiguration erstellt, welche die allgemeingültigste Auswahl realisiert. Die Veranschaulichung erfolgte über einen Sprachskill welcher seinen Kommunikationsstil je nach Konfiguration anpasst.
+
+Da die bisherige Zuordnung des Recommender-Systems auf recherchierten Daten basiert, sollte dies durch eine Nutzerstudie evaluiert und weiterentwickelt werden. Mittels empirischer Daten könnte zum einen eine präzisere Zuordnung von Profil und Konfiguration realisiert werden, zudem würde es eine Überprüfung und eventuelle Anpassung der Features ermöglichen.  Aufbauend darauf könnte das Konzept auf verschiedene moderne Technologien erweitert werden, um Senioren den Umgang mit diesen zu erleichtern.
+ 
+== Literatur
+// aus Forschungsteil übernehmen
