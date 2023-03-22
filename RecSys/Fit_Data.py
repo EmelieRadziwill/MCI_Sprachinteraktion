@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn import preprocessing
 
+
 userfile = "./Resources/profile.csv"
 userfile_created = "./Resources/profile_created.csv"
 configfile = "./Resources/config.csv"
