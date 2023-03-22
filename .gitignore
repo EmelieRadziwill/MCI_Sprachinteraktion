@@ -1,1 +1,8 @@
+/.gitignore
 /venv
+/.vscode
+/Recommender
+/Recommender_System
+/RecSys/__pycache__
+/RecSys/Resources/old
+

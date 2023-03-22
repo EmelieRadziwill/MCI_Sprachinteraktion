@@ -62,7 +62,6 @@
         var language_p = document.getElementById("language_p").value
         var hearing_aid = document.getElementById("hearing_aid").value
         var prior_knowledge = document.getElementById("prior_knowledge").value
-        var alternate_keywords = document.getElementById("alternate_keywords").value
 
         if (userName == "" ) {
             document.getElementById("button").style.display = "block";
@@ -93,10 +92,10 @@
                 'userId': '',
                 'userName': userName,
                 'age': age,
+                'gender_p': gender_p,
                 'language_p': language_p,
                 'hearing_aid': hearing_aid,
                 'prior_knowledge': prior_knowledge,
-                'alternate_keywords' : alternate_keywords
             }
             
             $.ajax({
