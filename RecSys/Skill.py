@@ -65,10 +65,11 @@ def Server():
         userdata, configdata = getNewUser(uid)
         recdata = KNN.predictConfig(userdata)
         recdata = Fitting.retranslate_configMapping(list(recdata))
+        print(configdata)
         
         if request.method == 'POST':
             return redirect(url_for('index'))
-        return render_template('config.html', c=configdata , r=recdata)
+        return render_template('config.html', c=configdata , r=recdata, u=userdata)
     
     
     @app.route('/save_config/', methods=['POST'])

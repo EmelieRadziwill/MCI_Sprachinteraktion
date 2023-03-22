@@ -77,7 +77,6 @@ def fit_data():
 
 
 def translate_userMapping(data):  # string to int
-    print(data)
     for x in range(2, 7):
         data[x] = user_mappings[x].get(data[x])
     return data
