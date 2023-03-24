@@ -39,7 +39,31 @@ Nach einer initialen Konfiguration des Nutzers über Angaben wie Alter, Geschlec
 // aus Forschungsteil übernehmen
 
 == Recommender System
-// Eric, Mac
+=== Funktionsweise
+Die Aufgabe des Recommender Systems ist es, dem Nutzer nach Eingabe weniger persönlicher Daten, eine Empfehlung für die Konfiguration des Sprachassistenten zu geben. 
+Nach dem Start des Systems wird der User gebeten persönlicher Daten, wie zum Beispiel Name, Alter, Geschlecht so wie die preferierte Sprache, anzugeben. Basierend auf dem Nutzerprofil erstellt das Recommendersystem eine empfohlene Konfiguration, welche ihm bei der Konfighurationsanpassung angezeigt wird.
+
+=== Aufbau
+Das Recommender System basiert auf einem KNN-Algorithmus. Dieser wird nach dem Start des Systems, mit einem aus Forschungsdaten erstellten Datensatz (profile.csv & config.csv), trainiert. Damit der KNN mit dem Datensatz arbeiten kann, muss dieser in Fit_Data.py gegeben werden um diesen in "Integer-Form" zu übersetzen. Danach ist der KNN dazu in der Lage, jedem neuen Profil eine Konfigurationsempfehlung zu errechnen.
+Skill.py stellt lediglich die Schnittstelle zwischen dem Frontend und dem Backend, sowie die Verwaltung neuer Daten da.
+
+=== Framework
+[%header, cols="1, 1"]
+|===
+
+|Framework
+|Beschreibung
+
+|scikit-learn
+|stellt mehere Deep-learning Algyrithmen, wie zum Beispiel KNN, zur Verfügung
+
+|pandas
+|ermöglicht das Auslesen, sowie das Bearbeiten von den CSV-Dateien
+
+|flask
+|Web-Framework zur Übergabe der Daten vom Backend zum Frondend
+
+|===
 
 == Sprachassistenten
 // Eric, Max
