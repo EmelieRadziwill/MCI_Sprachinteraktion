@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Konfiguration</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
     
 <body>
@@ -9,36 +10,51 @@
         <header class="page-header">
             <h1>Konfigurationen für User {{u[1]}} mit der ID: {{u[0]}}</h1>
         </header>
+      
+      <h1 class="one">
+          Konfiguration
+      </h1>
+      
+      <h1 class="two">
+        Empfehlung
+      </h1>
 
+      <div class="field">
+         <label>Geschlecht des Sprachassistenten</label>
+         <select class="conf" name="gender" id="gender" value="{{c[1]}}">
+             <option value="maennlich">männlich</option>
+             <option value="weiblich">weiblich</option>
+         </select>
+          <p>
+              {{r[0]}}
+          </p>     
+      </div><br>
 
-        <label>Geschlecht des Sprachassistenten</label>
-        <select name="gender" id="gender" value="{{c[1]}}">
-            <option value="maennlich">männlich</option>
-            <option value="weiblich">weiblich</option>
-        </select>
-        <p>
-            {{r[0]}}
-        </p><br><br>
-
+      
+      <div class="field">
         <label>Tonlage</label>
-        <select name="pitch" id="pitch">
+        <select class="conf" name="pitch" id="pitch">
             <option value="tief">tief</option>
             <option value="normal">normal</option>
             <option value="hoch">hoch</option>
         </select>
         <p>
             {{r[1]}}
-        </p><br><br>
-
+        </p>
+       </div><br>
+      
+      <div class="field">
         <label>Klang</label>
-        <select name="tone" id="tone">
+        <select class="conf" name="tone" id="tone">
             <option value="natuerlich">natürlich</option>
             <option value="synthetisch">synthetisch</option>
         </select>
         <p>
             {{r[2]}}
-        </p><br><br>
+        </p>
+      </div><br>
 
+      <div class="field">
         <label>Lautstärke</label>
         <select name="volume" id="volume">
             <option value="1">1 (leise)</option>
@@ -49,8 +65,10 @@
         </select>
         <p>
             {{r[3]}}
-        </p><br><br>
+        </p>
+      </div><br>
 
+      <div class="field">
         <label>Sprache</label>
         <select name="language" id="language">
             <option value="Deutsch">Deutsch</option>
@@ -58,8 +76,10 @@
         </select>
         <p>
             {{r[4]}}
-        </p><br><br>
+        </p>
+      </div><br>
 
+      <div class="field">
         <label>Gesprächsorientierung</label>
         <select name="topics" id="topics">
             <option value="Aufgaben orientiert">Aufgaben orientiert</option>
@@ -67,8 +87,10 @@
         </select>
         <p>
             {{r[5]}}
-        </p><br><br>
+        </p>
+      </div><br>
 
+      <div class="field">
         <label>Anrede</label>
         <select name="form_of_address" id="form_of_address">
             <option value="Sie">Siezen</option>
@@ -76,8 +98,10 @@
         </select>
         <p>
             {{r[6]}}
-        </p><br><br>
+        </p>
+      </div><br>
 
+      <div class="field">
         <label>Satzpause</label>
         <select name="pause" id="pause">
             <option value="keine">keine</option>
@@ -86,8 +110,10 @@
         </select>
         <p>
             {{r[7]}}
-        </p><br><br>
+        </p>
+      </div><br>
 
+      <div class="field">
         <label>Sprechgeschwindigkeit</label>
         <select name="speed" id="speed">
             <option value="langsam">langsam</option>
@@ -95,8 +121,10 @@
         </select>
         <p>
             {{r[8]}}
-        </p><br><br>
+        </p>
+      </div><br>
 
+      <div class="field">
         <label>Satzlänge</label>
         <select name="length" id="length">
             <option value="normal">normal</option>
@@ -104,8 +132,10 @@
         </select>
         <p>
             {{r[9]}}
-        </p><br><br>
+        </p>
+      </div><br>
 
+      <div class="field">
         <label>vereinfachter Ausdruck</label>
         <select name="expression" id="expression">
             <option value="ja">ja</option>
@@ -113,13 +143,18 @@
         </select>
         <p>
             {{r[10]}}
-        </p><br><br>
-
+        </p>
+      </div><br>
+      
+      <div class="field">
         <label>Alternative Keywords</label>
         <input type="text" id="alternate_keywords" placeholder="mehrere Keywords mit ',' trennen" value="{{c[12]}}" required=""/><br><br>
 
+      </div><br>
+      <div class="button">
         <input type="submit" value="Submit" onclick="submit()"><br><br>
-
+      </div>
+        
     </div> 
     
     <script>
@@ -182,84 +217,35 @@
         var expression = document.getElementById("expression").value
         var alternate_keywords = document.getElementById("alternate_keywords").value
 
-        if (gender == "" ) {
-            document.getElementById("button").style.display = "block";
-            document.getElementById("button").style.backgroundColor = "darkred";
-            document.getElementById("demo").innerHTML = "Option should not be empty!";
-        }else if(pitch == ""){
-            document.getElementById("button").style.display = "block";
-            document.getElementById("button").style.backgroundColor = "darkred";
-            document.getElementById("demo").innerHTML = "Option should not be empty!";
-        }else if(tone == ""){
-            document.getElementById("button").style.display = "block";
-            document.getElementById("button").style.backgroundColor = "darkred";
-            document.getElementById("demo").innerHTML = "Option should not be empty!";
-        }else if(volume == ""){
-            document.getElementById("button").style.display = "block";
-            document.getElementById("button").style.backgroundColor = "darkred";
-            document.getElementById("demo").innerHTML = "Option should not be empty!";
-        }else if(language == ""){
-            document.getElementById("button").style.display = "block";
-            document.getElementById("button").style.backgroundColor = "darkred";
-            document.getElementById("demo").innerHTML = "Option should not be empty!";
-        }else if(topics == ""){
-            document.getElementById("button").style.display = "block";
-            document.getElementById("button").style.backgroundColor = "darkred";
-            document.getElementById("demo").innerHTML = "Option should not be empty!";
-        }else if(form_of_address == ""){
-            document.getElementById("button").style.display = "block";
-            document.getElementById("button").style.backgroundColor = "darkred";
-            document.getElementById("demo").innerHTML = "Option should not be empty!";
-        }else if(pause == ""){
-            document.getElementById("button").style.display = "block";
-            document.getElementById("button").style.backgroundColor = "darkred";
-            document.getElementById("demo").innerHTML = "Option should not be empty!";
-        }else if(speed == ""){
-            document.getElementById("button").style.display = "block";
-            document.getElementById("button").style.backgroundColor = "darkred";
-            document.getElementById("demo").innerHTML = "Option should not be empty!";
-        }else if(length == ""){
-            document.getElementById("button").style.display = "block";
-            document.getElementById("button").style.backgroundColor = "darkred";
-            document.getElementById("demo").innerHTML = "Option should not be empty!";
-        }else if(expression == ""){
-            document.getElementById("button").style.display = "block";
-            document.getElementById("button").style.backgroundColor = "darkred";
-            document.getElementById("demo").innerHTML = "Option should not be empty!";
-        }else{
-
-            var pathArray = window.location.pathname.split("/");
-            var pathId = pathArray[2];
-
-            var user = {
-                'userId': pathId,
-                'gender': gender,
-                'pitch': pitch,
-                'tone': tone,
-                'volume': volume,
-                'language': language,
-                'topics': topics,
-                'form_of_address': form_of_address,
-                'pause': pause,
-                'speed' : speed,
-                'length' : length,
-                'expression': expression,
-                'alternate_keywords' : alternate_keywords
+        var user = {
+            'userId': "{{u[0]}}",
+            'gender': gender,
+            'pitch': pitch,
+            'tone': tone,
+            'volume': volume,
+            'language': language,
+            'topics': topics,
+            'form_of_address': form_of_address,
+            'pause': pause,
+            'speed' : speed,
+            'length' : length,
+            'expression': expression,
+            'alternate_keywords' : alternate_keywords
             }
             
-            $.ajax({
-                type: "POST",
-                url: "/save_config",
-                contentType: "application/json",
-                data: JSON.stringify(user),
-                dataType: "json",
-            }).done(function(result){
-                console.log(result);
-                document.getElementById("button").style.display = "block";
-                document.getElementById("button").style.backgroundColor = "forestgreen";
-                document.getElementById("demo").innerHTML = "Successfully submitted new configuration on ID: " + result.userId;
+        $.ajax({
+            type: "POST",
+            url: "/save_config",
+            contentType: "application/json",
+            data: JSON.stringify(user),
+            dataType: "json",
+        }).done(function(result){
+            console.log(result);
+            document.getElementById("button").style.display = "block";
+            document.getElementById("button").style.backgroundColor = "forestgreen";
+            document.getElementById("demo").innerHTML = "Successfully submitted new configuration on ID: " + result.userId;
             });
-        }
+        
     }
     </script>
 
