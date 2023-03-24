@@ -4,7 +4,7 @@ import KNN
 from flask import Flask, jsonify, request, redirect, render_template, url_for
 
 
-ip = "192.168.0.108"
+ip = "192.168.0.108" #eigene IP-Adresse angeben
 port = 8080
 profiles = "./Resources/profile_created.csv"
 configfile_created = "./Resources/config_created.csv"

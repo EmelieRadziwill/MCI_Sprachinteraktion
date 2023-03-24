@@ -41,7 +41,7 @@ Nach einer initialen Konfiguration des Nutzers über Angaben wie Alter, Geschlec
 == Recommender System
 === Funktionsweise
 Die Aufgabe des Recommender Systems ist es, dem Nutzer nach Eingabe weniger persönlicher Daten, eine Empfehlung für die Konfiguration des Sprachassistenten zu geben. 
-Nach dem Start des Systems wird der User gebeten persönlicher Daten, wie zum Beispiel Name, Alter, Geschlecht so wie die preferierte Sprache, anzugeben. Basierend auf dem Nutzerprofil erstellt das Recommendersystem eine empfohlene Konfiguration, welche ihm bei der Konfighurationsanpassung angezeigt wird.
+Bevor man das Programm startet, sollte man in Skill.py die IP-Adresse auf den Host anpassen. Danach kann man Recommender.py starten. Nach dem Start des Systems ruft man mit Hilfe seines Browsers die Adresse xxx.xxx.x.xxx:8080/MCI/newUser auf. Dort wird der User gebeten persönlicher Daten, wie zum Beispiel Name, Alter, Geschlecht so wie die preferierte Sprache, anzugeben. Basierend auf dem Nutzerprofil erstellt das Recommendersystem eine empfohlene Konfiguration, welche ihm bei der Konfighurationsanpassung angezeigt wird. Um die Konfiguration aufzurufen, ruft man .../MCI/(ID des Nutzers) auf. Dort kann man seine Konfigurationen jederzeit anpassen und mit der Recommendation vergleichen.
 
 === Aufbau
 Das Recommender System basiert auf einem KNN-Algorithmus. Dieser wird nach dem Start des Systems, mit einem aus Forschungsdaten erstellten Datensatz (profile.csv & config.csv), trainiert. Damit der KNN mit dem Datensatz arbeiten kann, muss dieser in Fit_Data.py gegeben werden um diesen in "Integer-Form" zu übersetzen. Danach ist der KNN dazu in der Lage, jedem neuen Profil eine Konfigurationsempfehlung zu errechnen.
@@ -66,17 +66,16 @@ Skill.py stellt lediglich die Schnittstelle zwischen dem Frontend und dem Backen
 |===
 
 == Sprachassistenten
-// Eric, Max
+Als anpassbaren Beispielskill entschieden wir uns für eine Wetterabfrage. Für die Umsetzung des Skills wurde Alexa von Amazon verwendet. Mit Hilfe der Alexa Developer Console ist es möglich ein Sprachmodell zu erstellen, welches mit den vom Recommender geschriebenen CSV-Dateien angelernt werden kann. Mit diesen Informationen und SSML Tags kann man Ausgaben des Sprachassistenten auf den Benutzer anpassen. 
+
+Da die Erstellung eines Alexa Skills nur über die Alexa Developer Console mit einem eigenen Alexa Developer Account möglich ist, haben wir ein Template beigefügt nach dem man sich mit einem eigenen Skill richten kann. Dazu ergänzt man lediglich die lambda Python-Datei in der Alexa Konsole und fügt die CSV mit dem Datensatz hinzu.
+
 === Analyse der Anforderungen 
 ==== Funktionale Anforderungen
 
-*Spracherkennung:* Die Aufgabe der Spracherkennung (Speech to Text) ist es Audiosignale in Text umzuwandeln. Dadurch können Befehle/Skills akustisch aufgerufen werden. 
+*anpassbarer (Alexa-)Skill:* Ein Sprachinteraktionsskills dessen Funktion anhand der Einstellung des Nutzers anpassbar ist. Damit sind Unterschiede bei der Eingabe des Nutzers oder der Ausgabe des Assistenten basierend auf den individuellen Vorgaben des Variabilitätsmodells gemeint. 
 
-*Sprachausgabe/ Sprachsynthese:* Die Sprachausgabe (Text to Speech) soll einen vom Skill gelieferten Text in Audioform umwandeln und diesen so ausgeben, dass dieser von einem Menschen verstanden werden kann.  
-
-*anpassbare (Alexa-)Skills:* Ein oder mehrere Sprachinteraktionsskills deren Funktion anhand der Einstellung des Nutzers anpassbar sind. Damit sind Unterschiede bei der Eingabe des Nutzers oder der Ausgabe des Assistenten basierend auf den individuellen Vorgaben des Variabilitätsmodells gemeint. 
-
-*Recommendersystem:* Die Aufgabe des Recommendersystems ist es, nach Eingabe der persönlichen Daten des Nutzers, den Sprachassitenten zu konfigurieren. Die Konfiguration basierd auf den Daten mit denen das System trainiert wurde und den Vorgaben des Variabilitätsmodells. 
+*Recommendersystem:* Die Aufgabe des Recommendersystems ist es, nach Eingabe der persönlichen Daten des Nutzers, den Sprachassistenten zu konfigurieren. Die Konfiguration basierd auf den Daten mit denen das System trainiert wurde und den Vorgaben des Variabilitätsmodells. 
 
 *Variabilitätsmodell:* Das Variabilitätsmodell gibt vor welche Einstellungen zusammen oder ausschließend valide sind. Dabei bezieht es sich auf unser Featuremodell und nimmt Eingaben vom Benutzer oder dem Recommendersystem.
  
@@ -84,20 +83,9 @@ Skill.py stellt lediglich die Schnittstelle zwischen dem Frontend und dem Backen
 
 *Fehlerrate:* Die Fehlerrate sollte sowohl bei der Spracherkennung, als auch bei der Aktivierung (WakeWord/Intervall), möglichst gering sein.
 
-*Skills:* Das Ziel ist es, eigene Skills entwickeln und in den Sprachassistenten einzubauen zu können. Diese Skills sollen dann durch mehere unterschiedliche Ausrufe ausführbar sein. 
-
 *Variable Antworten (Featuremodell):* Die Antworten sollten je nach Nutzer unterschiedlich sein. Diese können nach dem Featuremodell in den folgenden Punkten unterscheiden: Tonlage, Geschlecht, Lautstärke, Geschwindigkeit, Sprache, Sprechweise/ Slang, Komplexität, Dialekt und ob die Ausgabe Motivieren/ Loben soll. 
 
 *Qualität der Sprachausgabe:* Das Ziel der Sprachausgabe ist möglichst nah an ein menschliches Sprachbild ranzukommen und nicht wie ein Computer zu klingen.
-
-=== Frameworks
-Recommender System Praktika letztes Semester
-
-=== Komponenten
-Alexa
-
-== Produktaufbau/ -verwendung
-// Eric, Max
 
 == Projektorganisation 
 [%header, cols="1, 1, 1"]
