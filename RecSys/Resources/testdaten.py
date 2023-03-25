@@ -2,7 +2,7 @@ import csv
 
 csv.register_dialect('excel_new', 'excel', delimiter=';' )
 sprachen = ['Deutsch', 'Englisch']
-geschlecht = ['m', 'w']
+geschlecht = ['maennlich', 'weiblich', 'divers']
 bool = ['ja', 'nein']
 id = 1
 profiles = []
@@ -23,8 +23,8 @@ for knowledge in bool:
                     for age in range(65,101):
                         if age > 80:
                             expression = 'ja'
-                        profiles.append({'ID': id, 'Name': id, 'Alter': age, 'Geschlecht': gender, 'Sprache': language, 'Hörgerät': hearing, 'Vorkenntnisse': knowledge, 'alternative Keywords': ''})
-                        configs.append({'ID': id, 'Geschlecht': 'männlich', 'Tonlage': pitch, 'Klang': 'natürlich', 'Lautstärke' : 3, 'Sprache': language, 'Gesprächsorientierung': 'Aufgaben orientiert', 'Anrede': 'Du', 'alternative Keywords': '', 'Satzpause': 'kurz', 'Sprechgeschwindigkeit': rate, 'Satzlänge': length, 'Ausdruck': expression})
+                        profiles.append({'ID': id, 'Name': id, 'Alter': age, 'Geschlecht': gender, 'Sprache': language, 'Hoergeraet': hearing, 'Vorkenntnisse': knowledge})
+                        configs.append({'ID': id, 'Geschlecht': 'maennlich', 'Tonlage': pitch, 'Klang': 'natuerlich', 'Lautstaerke' : 3, 'Sprache': language, 'Gespraechsorientierung': 'Aufgaben orientiert', 'Anrede': 'Du', 'Satzpause': 'kurz', 'Sprechgeschwindigkeit': rate, 'Satzlaenge': length, 'Ausdruck': expression, 'alternative Keywords': ''})
                         id += 1
                         expression = 'nein'
             pitch = 'normal'
@@ -32,13 +32,13 @@ for knowledge in bool:
             length = 'normal' 
 
 with open('Profil.csv', 'w', newline='') as csvfile:
-    headers = ['ID', 'Name', 'Alter', 'Geschlecht', 'Sprache', 'Hörgerät', 'Vorkenntnisse', 'alternative Keywords']
+    headers = ['ID', 'Name', 'Alter', 'Geschlecht', 'Sprache', 'Hoergeraet', 'Vorkenntnisse']
     writer = csv.DictWriter(csvfile, dialect='excel_new', fieldnames=headers)
     writer.writeheader()
     writer.writerows(profiles)
 
 with open('Config.csv', 'w', newline='') as csvfile:
-    headers = ['ID', 'Geschlecht', 'Tonlage', 'Klang', 'Lautstärke', 'Sprache', 'Gesprächsorientierung', 'Anrede', 'alternative Keywords', 'Satzpause', 'Sprechgeschwindigkeit', 'Satzlänge', 'Ausdruck']
+    headers = ['ID', 'Geschlecht', 'Tonlage', 'Klang', 'Lautstaerke', 'Sprache', 'Gespraechsorientierung', 'Anrede', 'Satzpause', 'Sprechgeschwindigkeit', 'Satzlaenge', 'Ausdruck', 'alternative Keywords']
     writer = csv.DictWriter(csvfile, dialect='excel_new', fieldnames=headers)
     writer.writeheader()
     writer.writerows(configs)
