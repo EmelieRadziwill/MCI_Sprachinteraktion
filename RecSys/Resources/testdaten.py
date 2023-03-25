@@ -31,13 +31,13 @@ for knowledge in bool:
             rate = 'durchschnittlich'
             length = 'normal' 
 
-with open('Profil.csv', 'w', newline='') as csvfile:
+with open('profile.csv', 'w', newline='') as csvfile:
     headers = ['ID', 'Name', 'Alter', 'Geschlecht', 'Sprache', 'Hoergeraet', 'Vorkenntnisse']
     writer = csv.DictWriter(csvfile, dialect='excel_new', fieldnames=headers)
     writer.writeheader()
     writer.writerows(profiles)
 
-with open('Config.csv', 'w', newline='') as csvfile:
+with open('config.csv', 'w', newline='') as csvfile:
     headers = ['ID', 'Geschlecht', 'Tonlage', 'Klang', 'Lautstaerke', 'Sprache', 'Gespraechsorientierung', 'Anrede', 'Satzpause', 'Sprechgeschwindigkeit', 'Satzlaenge', 'Ausdruck', 'alternative Keywords']
     writer = csv.DictWriter(csvfile, dialect='excel_new', fieldnames=headers)
     writer.writeheader()
