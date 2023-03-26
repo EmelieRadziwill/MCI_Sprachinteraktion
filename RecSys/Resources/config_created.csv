@@ -1,1 +1,7 @@
 userId;Geschlecht;Tonlage;Klang;Lautstaerke;Sprache;Gespraechsorientierung;Anrede;Satzpause;Sprechgeschwindigkeit;Satzlaenge;Ausdruck;alternative Keywords
+901;maennlich;tief;natuerlich;3;Deutsch;Aufgaben orientiert;Du;kurz;langsam;vereinfacht;nein;
+902;weiblich;normal;natuerlich;3;Deutsch;Aufgaben orientiert;Du;kurz;durchschnittlich;normal;ja;
+903;weiblich;tief;natuerlich;3;Englisch;Aufgaben orientiert;Du;kurz;langsam;vereinfacht;nein;
+904;maennlich;normal;natuerlich;3;Englisch;Aufgaben orientiert;Du;kurz;durchschnittlich;normal;ja;
+905;weiblich;normal;natuerlich;3;Deutsch;Aufgaben orientiert;Du;kurz;durchschnittlich;normal;nein;
+906;maennlich;tief;natuerlich;3;Deutsch;Aufgaben orientiert;Du;kurz;langsam;vereinfacht;ja;

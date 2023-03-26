@@ -1,1 +1,7 @@
 userId;Name;Alter;Geschlecht;Sprache;Hoergeraet;Vorkenntnisse
+901;Otto;73;maennlich;Deutsch;ja;ja
+902;Lieselotte;92;weiblich;Deutsch;nein;ja
+903;Charlotte;71;weiblich;Englisch;ja;nein
+904;Charles;75;maennlich;Englisch;nein;nein
+905;Giesela;68;weiblich;Deutsch;nein;ja
+906;Herbert;85;maennlich;Deutsch;ja;nein

@@ -1,4 +1,4 @@
-ID;Name;Alter;Geschlecht;Sprache;Hoergeraet;Vorkenntnisse
+userId;Name;Alter;Geschlecht;Sprache;Hoergeraet;Vorkenntnisse
 1;1;65;maennlich;Deutsch;ja;ja
 2;2;66;maennlich;Deutsch;ja;ja
 3;3;67;maennlich;Deutsch;ja;ja
