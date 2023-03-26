@@ -4,7 +4,7 @@ import KNN
 from flask import Flask, jsonify, request, redirect, render_template, url_for
 
 
-ip = "192.168.0.108" #eigene IP-Adresse angeben
+ip = "" #eigene IP-Adresse angeben
 port = 8080
 profiles = "./Resources/profile_created.csv"
 configfile_created = "./Resources/config_created.csv"
@@ -89,7 +89,7 @@ def store_config(data): #Konfigurationen abspeichern
 
 def create_default_config(id):
     with open(configfile_created, 'a') as csv:
-        csv.write("\n" + str(id) + ";" + "maennlich" + ";" + "normal" + ";" + "natuerlich" + ";" + "3" + ";" + "Deutsch" + ";" + "Aufgaben orientiert" + ";" + "du" + ";" + "kurz" + ";" + "durchschnittlich" + ";" + "normal" + ";" + "nein" + ";" )
+        csv.write("\n" + str(id) + ";" + "maennlich" + ";" + "normal" + ";" + "natuerlich" + ";" + "3" + ";" + "Deutsch" + ";" + "Aufgaben orientiert" + ";" + "Du" + ";" + "kurz" + ";" + "durchschnittlich" + ";" + "normal" + ";" + "nein" + ";" )
 
 
 def get_csvuser(uid): #Trainingdaten auslesen
