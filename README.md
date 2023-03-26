@@ -14,5 +14,8 @@ Repository zur Entwicklung eines für die Zielgruppe älterer Menschen anwendbar
                   - Eclipse IDE - 2022-12
 
 ## RecSys
-    /TODOO
-
+    - Templates
+    - Trainings- und Userdaten
+    - Recommender.py (main)
+    - Skill.py (Schnittstelle von Frond- & Backend)
+    - KNN.py & Fit_Data.py (KNN)
