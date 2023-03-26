@@ -19,3 +19,9 @@ Repository zur Entwicklung eines für die Zielgruppe älterer Menschen anwendbar
     - Recommender.py (main)
     - Skill.py (Schnittstelle von Frond- & Backend)
     - KNN.py & Fit_Data.py (KNN)
+
+## WetterSkillTemplate/lambda
+    -Template für eigenen Alexa Skill
+    -lambda_function.py (AbfrageHandler enthält Logik)
+    -csv_utils.py (Übersetzen der Configs)
+    -config.csv (Konfigurationen hier einfügen)
